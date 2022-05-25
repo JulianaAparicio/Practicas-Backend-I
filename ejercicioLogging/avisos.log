@@ -1,0 +1,127 @@
+[2022-05-2516:12:39] [ INFO ] [Leon:19] El León Simbaestá corriendo.
+[2022-05-2516:12:39] [ INFO ] [Leon:29] La edad es menor o igual 10 años y es Alfa.
+[2022-05-2516:12:39] [ DEBUG] [Leon:42] Fin del programa con éxito.
+[2022-05-2516:12:39] [ INFO ] [Leon:19] El León Bomestá corriendo.
+[2022-05-2516:12:39] [ INFO ] [Leon:34] La edad es menor o igual 10 años y no es Alfa.
+[2022-05-2516:12:39] [ DEBUG] [Leon:42] Fin del programa con éxito.
+[2022-05-2516:12:39] [ INFO ] [Tigre:17] El Tigre Goldenestá corriendo.
+[2022-05-2516:12:39] [ INFO ] [Tigre:17] El Tigre Shere Khanestá corriendo.
+[2022-05-2516:13:45] [ INFO ] [Leon:19] El León Simba está corriendo.
+[2022-05-2516:13:45] [ INFO ] [Leon:29] La edad es menor o igual 10 años y es Alfa.
+[2022-05-2516:13:45] [ DEBUG] [Leon:42] Fin del programa con éxito.
+[2022-05-2516:13:45] [ INFO ] [Leon:19] El León Bom está corriendo.
+[2022-05-2516:13:45] [ INFO ] [Leon:34] La edad es menor o igual 10 años y no es Alfa.
+[2022-05-2516:13:45] [ DEBUG] [Leon:42] Fin del programa con éxito.
+[2022-05-2516:13:46] [ INFO ] [Tigre:17] El Tigre Golden está corriendo.
+[2022-05-2516:13:46] [ INFO ] [Tigre:17] El Tigre Shere Khan está corriendo.
+[2022-05-2516:17:05] [ INFO ] [Leon:19] El León Simba está corriendo.
+[2022-05-2516:17:05] [ ERROR] [Leon:32] La edad no puede ser negativa.
+java.lang.Exception
+	at com.main.Leon.esMayorA10(Leon.java:31)
+	at com.main.Main.main(Main.java:32)
+[2022-05-2516:17:05] [ DEBUG] [Leon:46] Fin del programa con éxito.
+[2022-05-2516:17:05] [ INFO ] [Leon:19] El León Bom está corriendo.
+[2022-05-2516:17:05] [ INFO ] [Leon:38] La edad es menor o igual 10 años y no es Alfa.
+[2022-05-2516:17:05] [ DEBUG] [Leon:46] Fin del programa con éxito.
+[2022-05-2516:17:05] [ INFO ] [Tigre:17] El Tigre Golden está corriendo.
+[2022-05-2516:17:05] [ INFO ] [Tigre:17] El Tigre Shere Khan está corriendo.
+[2022-05-2516:17:40] [ INFO ] [Leon:19] El León Simba está corriendo.
+[2022-05-2516:17:40] [ ERROR] [Leon:32] La edad no puede ser negativa.
+java.lang.Exception
+	at com.main.Leon.esMayorA10(Leon.java:31)
+	at com.main.Main.main(Main.java:32)
+[2022-05-2516:17:40] [ DEBUG] [Leon:46] Fin del programa con éxito.
+[2022-05-2516:17:40] [ INFO ] [Leon:19] El León Bom está corriendo.
+[2022-05-2516:17:40] [ INFO ] [Leon:38] La edad es menor o igual 10 años y no es Alfa.
+[2022-05-2516:17:40] [ DEBUG] [Leon:46] Fin del programa con éxito.
+[2022-05-2516:17:40] [ INFO ] [Tigre:17] El Tigre Golden está corriendo.
+[2022-05-2516:17:40] [ INFO ] [Tigre:17] El Tigre Shere Khan está corriendo.
+[2022-05-2516:19:50] [ INFO ] [Leon:19] El León Simba está corriendo.
+[2022-05-2516:19:50] [ ERROR] [Leon:32] La edad no puede ser negativa.
+java.lang.Exception
+	at com.main.Leon.esMayorA10(Leon.java:31)
+	at com.main.Main.main(Main.java:32)
+[2022-05-2516:19:50] [ DEBUG] [Leon:46] Fin del programa con éxito.
+[2022-05-2516:19:50] [ INFO ] [Leon:19] El León Bom está corriendo.
+[2022-05-2516:19:50] [ INFO ] [Leon:38] La edad es menor o igual 10 años y no es Alfa.
+[2022-05-2516:19:50] [ DEBUG] [Leon:46] Fin del programa con éxito.
+[2022-05-2516:19:50] [ INFO ] [Leon:25] Es mayor de 10 años y es Alfa
+[2022-05-2516:19:50] [ DEBUG] [Leon:46] Fin del programa con éxito.
+[2022-05-2516:19:50] [ INFO ] [Leon:38] La edad es menor o igual 10 años y no es Alfa.
+[2022-05-2516:19:50] [ DEBUG] [Leon:46] Fin del programa con éxito.
+[2022-05-2516:19:50] [ INFO ] [Tigre:17] El Tigre Golden está corriendo.
+[2022-05-2516:19:50] [ INFO ] [Tigre:17] El Tigre Shere Khan está corriendo.
+[2022-05-2516:20:07] [ INFO ] [Leon:19] El León Simba está corriendo.
+[2022-05-2516:20:07] [ ERROR] [Leon:32] La edad no puede ser negativa.
+java.lang.Exception
+	at com.main.Leon.esMayorA10(Leon.java:31)
+	at com.main.Main.main(Main.java:32)
+[2022-05-2516:20:07] [ DEBUG] [Leon:46] Fin del programa con éxito.
+[2022-05-2516:20:07] [ INFO ] [Leon:19] El León Bom está corriendo.
+[2022-05-2516:20:07] [ INFO ] [Leon:38] La edad es menor o igual 10 años y no es Alfa.
+[2022-05-2516:20:07] [ DEBUG] [Leon:46] Fin del programa con éxito.
+[2022-05-2516:20:07] [ INFO ] [Leon:25] Es mayor de 10 años y es Alfa
+[2022-05-2516:20:07] [ DEBUG] [Leon:46] Fin del programa con éxito.
+[2022-05-2516:20:07] [ INFO ] [Leon:38] La edad es menor o igual 10 años y no es Alfa.
+[2022-05-2516:20:07] [ DEBUG] [Leon:46] Fin del programa con éxito.
+[2022-05-2516:20:07] [ INFO ] [Tigre:17] El Tigre Golden está corriendo.
+[2022-05-2516:20:07] [ INFO ] [Tigre:23] Es mayor de 10 años.
+[2022-05-2516:20:07] [ DEBUG] [Tigre:37] Fin del programa con éxito.
+[2022-05-2516:20:07] [ ERROR] [Tigre:27] La edad no puede ser negativa.
+java.lang.Exception
+	at com.main.Tigre.esMayorA10(Tigre.java:26)
+	at com.main.Main.main(Main.java:45)
+[2022-05-2516:20:07] [ DEBUG] [Tigre:37] Fin del programa con éxito.
+[2022-05-2516:23:53] [ INFO ] [Leon:19] El León Simba está corriendo.
+[2022-05-2516:23:53] [ ERROR] [Leon:32] La edad no puede ser negativa.
+java.lang.Exception
+	at com.main.Leon.esMayorA10(Leon.java:31)
+	at com.main.Main.main(Main.java:32)
+[2022-05-2516:23:53] [ DEBUG] [Leon:48] Fin del programa con éxito.
+[2022-05-2516:23:53] [ INFO ] [Leon:19] El León Bom está corriendo.
+[2022-05-2516:23:53] [ ERROR] [Leon:36] La edad del León Bom es incorrecta.
+java.lang.Exception
+	at com.main.Leon.esMayorA10(Leon.java:35)
+	at com.main.Main.main(Main.java:35)
+[2022-05-2516:23:53] [ DEBUG] [Leon:48] Fin del programa con éxito.
+[2022-05-2516:23:53] [ INFO ] [Leon:25] Es mayor de 10 años y es Alfa
+[2022-05-2516:23:53] [ DEBUG] [Leon:48] Fin del programa con éxito.
+[2022-05-2516:23:53] [ INFO ] [Leon:42] La edad es menor o igual 10 años y no es Alfa.
+[2022-05-2516:23:53] [ DEBUG] [Leon:48] Fin del programa con éxito.
+[2022-05-2516:23:53] [ INFO ] [Tigre:17] El Tigre Golden está corriendo.
+[2022-05-2516:23:53] [ INFO ] [Tigre:23] Es mayor de 10 años.
+[2022-05-2516:23:53] [ DEBUG] [Tigre:39] Fin del programa con éxito.
+[2022-05-2516:23:53] [ ERROR] [Tigre:31] La edad no puede ser negativa.
+java.lang.Exception
+	at com.main.Tigre.esMayorA10(Tigre.java:30)
+	at com.main.Main.main(Main.java:45)
+[2022-05-2516:23:53] [ DEBUG] [Tigre:39] Fin del programa con éxito.
+[2022-05-2516:25:23] [ INFO ] [Leon:19] El León Simba está corriendo.
+[2022-05-2516:25:23] [ ERROR] [Leon:32] La edad no puede ser negativa.
+java.lang.Exception
+	at com.main.Leon.esMayorA10(Leon.java:31)
+	at com.main.Main.main(Main.java:32)
+[2022-05-2516:25:23] [ DEBUG] [Leon:48] Fin del programa con éxito.
+[2022-05-2516:25:23] [ INFO ] [Leon:19] El León Bom está corriendo.
+[2022-05-2516:25:23] [ ERROR] [Leon:36] La edad del León Bom es incorrecta.
+java.lang.Exception
+	at com.main.Leon.esMayorA10(Leon.java:35)
+	at com.main.Main.main(Main.java:35)
+[2022-05-2516:25:23] [ DEBUG] [Leon:48] Fin del programa con éxito.
+[2022-05-2516:25:23] [ INFO ] [Leon:25] Es mayor de 10 años y es Alfa
+[2022-05-2516:25:23] [ DEBUG] [Leon:48] Fin del programa con éxito.
+[2022-05-2516:25:23] [ INFO ] [Leon:42] La edad es menor o igual 10 años y no es Alfa.
+[2022-05-2516:25:23] [ DEBUG] [Leon:48] Fin del programa con éxito.
+[2022-05-2516:25:23] [ INFO ] [Tigre:17] El Tigre Golden está corriendo.
+[2022-05-2516:25:23] [ INFO ] [Tigre:23] Es mayor de 10 años.
+[2022-05-2516:25:23] [ DEBUG] [Tigre:39] Fin del programa con éxito.
+[2022-05-2516:25:23] [ ERROR] [Tigre:31] La edad no puede ser negativa.
+java.lang.Exception
+	at com.main.Tigre.esMayorA10(Tigre.java:30)
+	at com.main.Main.main(Main.java:45)
+[2022-05-2516:25:23] [ DEBUG] [Tigre:39] Fin del programa con éxito.
+[2022-05-2516:25:23] [ ERROR] [Tigre:27] La edad del Tigre Silver es incorrecta.
+java.lang.Exception
+	at com.main.Tigre.esMayorA10(Tigre.java:26)
+	at com.main.Main.main(Main.java:47)
+[2022-05-2516:25:23] [ DEBUG] [Tigre:39] Fin del programa con éxito.
