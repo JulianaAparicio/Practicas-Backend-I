@@ -35,18 +35,10 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="file://$USER_HOME$/Documents/DOCUMENTOS/h2" />
+          <root url="jar://$USER_HOME$/Documents/DOCUMENTOS/h2/bin/h2-2.1.210.jar!/" />
         </CLASSES>
-        <JAVADOC>
-          <root url="file://$USER_HOME$/Documents/DOCUMENTOS/h2/docs/javadoc" />
-        </JAVADOC>
-        <SOURCES>
-          <root url="file://$USER_HOME$/Documents/DOCUMENTOS/h2/src/java10/src" />
-          <root url="file://$USER_HOME$/Documents/DOCUMENTOS/h2/src/java9/src" />
-          <root url="file://$USER_HOME$/Documents/DOCUMENTOS/h2/src/main" />
-          <root url="file://$USER_HOME$/Documents/DOCUMENTOS/h2/src/test" />
-          <root url="file://$USER_HOME$/Documents/DOCUMENTOS/h2/src/tools" />
-        </SOURCES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
   </component>
