@@ -41,15 +41,15 @@ public class Main {
         // Cargamos el controlador:
 
         try {
-            Class.forName("org.h2.Driver").newInstance();;
+            Class.forName("org.h2.Driver");;
         }
-        catch(ClassNotFoundException | InstantiationException | IllegalAccessException ex) {
+        catch(ClassNotFoundException ex) {
             logger.error("Error: no se pudo cargar el controlador!");
             System.exit(1);
         }
 
         final String SQL_TABLE_CREATE = "CREATE TABLE IF NOT EXISTS PACIENTE (dni INT PRIMARY KEY, nombre VARCHAR(255), apellido VARCHAR(255), domicilio VARCHAR(255), fechaDeAlta DATE, usuario VARCHAR (15), contrasenia VARCHAR(10))";
-        final String SQL_INSERT = "INSERT INTO PACIENTE VALUES(dni, nombre, apellido, domicilio, fechaDeAlta, usuario, contrasenia) VALUES (?, ?, ?, ?, ?, ?, ?)";
+        final String SQL_INSERT = "INSERT INTO PACIENTE (dni, nombre, apellido, domicilio, fechaDeAlta, usuario, contrasenia) VALUES (?,?,?,?,?,?,?)";
         final String SQL_UPDATE = "UPDATE PACIENTE SET contrasenia=? WHERE dni=?";
 
         // Establecemos la conexión a la Base de Datos, creamos la tabla e insertamos una fila:
@@ -98,11 +98,15 @@ public class Main {
             String queryDePrueba = "SELECT * FROM PACIENTE";
             Statement statement = connection.createStatement();
             ResultSet rd = statement.executeQuery(queryDePrueba);
+
             while(rd.next()){
-                logger.info(rd.getInt(1) + rd.getString(2) + rd.getString(3) +
-                        rd.getString(4) + rd.getString(5) + rd.getString(6) +
+                logger.info("DNI: " + rd.getInt(1) + " Nombre: " + rd.getString(2) +
+                                " Apellido: " + rd.getString(3) + " Domicilio: " +
+                                rd.getString(4) + " Fecha de alta: " + rd.getString(5)
+                                + " Usuario: " + rd.getString(6) + " Contraseña: " +
                         rd.getString(7));
             }
+
         } catch (SQLException ex){
             logger.error(ex.getMessage());
             logger.info("Se hará un rollback de la información...");
