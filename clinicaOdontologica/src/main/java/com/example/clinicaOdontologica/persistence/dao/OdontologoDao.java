@@ -113,7 +113,7 @@ public class OdontologoDao implements Dao<Odontologo>{
                 String nombre = rs.getString("nombre");
                 String apellido = rs.getString("apellido");
 
-                resultado = new Odontologo(id, nombre,apellido,matricula);
+                resultado = new Odontologo(nombre,apellido,matricula);
             }
 
             System.out.println("El odontólogo buscado es: "+ resultado);

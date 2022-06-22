@@ -32,7 +32,7 @@ public class OdontologoService {
 //        return odontologo;
     }
 
-    public Odontologo buscarOdontologoPorId(long id){
+    public Odontologo buscarOdontologoPorId(Long id){
         return odontologoDao.consultarPorId(id);
 //        Odontologo odontologoBuscado = getOdontologoDao().consultarPorId(id);
 //        return  odontologoBuscado;
@@ -44,8 +44,12 @@ public class OdontologoService {
 //        return  odontologoEditado;
     }
 
-    public void eliminarOdontologoPorId(long id){
-       odontologoDao.eliminar(id);
+    public String eliminarOdontologoPorId(Long id){
+        if(odontologoDao.consultarPorId(id) != null){
+            odontologoDao.eliminar(id);
+            return "El odontólogo con id " + id + " fue eliminado.";
+        }
+        return "El odontólogo con id " + id + " no existe.";
     }
 
     //GETTER Y SETTER

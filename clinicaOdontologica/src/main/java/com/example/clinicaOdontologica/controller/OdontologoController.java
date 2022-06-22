@@ -25,9 +25,13 @@ public class OdontologoController {
         return ResponseEntity.ok(odontologoService.buscarOdontologoPorId(id));
     }
 
-    @PostMapping("/crear")
+    @PostMapping(path = "/crear")
     public ResponseEntity<Odontologo> crearOdontologo(@RequestBody Odontologo o){
-        return ResponseEntity.ok(odontologoService.crearOdontologo(o));
+
+        ResponseEntity respuesta = null;
+        respuesta = ResponseEntity.ok(odontologoService.crearOdontologo(o));
+
+        return respuesta;
     }
 
     @PutMapping("/modificar")

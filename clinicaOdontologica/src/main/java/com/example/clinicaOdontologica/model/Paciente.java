@@ -27,8 +27,7 @@ public class Paciente {
         this.fechaDeIngreso = fechaDeIngreso;
     }
 
-    public Paciente(Long id, String apellido, String nombre, String email) {
-        this.id = id;
+    public Paciente(String apellido, String nombre, String email) {
         this.apellido = apellido;
         this.nombre = nombre;
         this.email = email;
@@ -36,7 +35,7 @@ public class Paciente {
     }
 
     public Paciente(Long id, String apellido, String nombre, String email, Domicilio domicilio) {
-        this(id, apellido, nombre, email);
+        this(apellido, nombre, email);
         this.domicilio = domicilio;
     }
 
