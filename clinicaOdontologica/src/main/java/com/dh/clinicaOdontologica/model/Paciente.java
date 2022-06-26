@@ -2,10 +2,7 @@ package com.dh.clinicaOdontologica.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.Set;
 
@@ -22,6 +19,7 @@ public class Paciente {
     private Domicilio domicilio;
     private String email;
     private LocalDate fechaDeIngreso;
+    @OneToMany(mappedBy = "paciente")
     @JsonIgnore
     private Set<Turno> turnos;
 

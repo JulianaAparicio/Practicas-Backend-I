@@ -1,9 +1,6 @@
 package com.dh.clinicaOdontologica.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.time.LocalDate;
 
 @Entity
@@ -12,7 +9,11 @@ public class Turno {
     @Id
     @GeneratedValue
     private Long id;
+    @ManyToOne
+    @JoinColumn(name = "paciente_id", nullable = false)
     private Paciente paciente;
+    @ManyToOne
+    @JoinColumn(name = "odontologo_id", nullable = false)
     private Odontologo odontologo;
     private LocalDate fecha;
     private String hora;

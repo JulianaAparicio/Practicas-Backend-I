@@ -1,9 +1,8 @@
 package com.dh.clinicaOdontologica.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import javax.persistence.*;
 import java.util.Set;
 
 @Entity
@@ -15,6 +14,8 @@ public class Odontologo {
     private String apellido;
     private String nombre;
     private String matricula;
+    @OneToMany(mappedBy = "odontologo")
+    @JsonIgnore
     private Set<Turno> turnos;
 
     public Odontologo() {
