@@ -1,8 +1,16 @@
 package com.dh.clinicaOdontologica.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.util.Set;
 
+@Entity
+@Table(name = "Odontologos")
 public class Odontologo {
+    @Id
+    @GeneratedValue
     private Long id;
     private String apellido;
     private String nombre;

@@ -1,9 +1,20 @@
 package com.dh.clinicaOdontologica.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.time.LocalDate;
 import java.util.Set;
 
+@Entity
+@Table(name = "Pacientes")
 public class Paciente {
+
+    @Id
+    @GeneratedValue
     private Long id;
     private String nombre;
     private String apellido;
@@ -11,6 +22,7 @@ public class Paciente {
     private Domicilio domicilio;
     private String email;
     private LocalDate fechaDeIngreso;
+    @JsonIgnore
     private Set<Turno> turnos;
 
 
