@@ -1,7 +1,7 @@
 package com.dh.clinicaOdontologica.service;
 
 import com.dh.clinicaOdontologica.model.PacienteDTO;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -20,6 +20,7 @@ class PacienteServiceTest {
         pacienteDTO.setApellido("Aparicio");
         pacienteDTO.setNombre("Juliana");
         pacienteService.crearPaciente(pacienteDTO);
+        // Cambiar antes de ejecutar:
         PacienteDTO pacienteTest = pacienteService.buscarPaciente(1L);
 
         assertNotNull(pacienteTest);

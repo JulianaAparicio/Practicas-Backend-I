@@ -1,7 +1,5 @@
 package com.dh.clinicaOdontologica.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.HashSet;
@@ -22,7 +20,7 @@ public class Paciente {
     private Domicilio domicilio;
     private String email;
     private LocalDate fechaDeIngreso;
-    @OneToMany(mappedBy = "paciente", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "paciente", fetch = FetchType.EAGER)
     private Set<Turno> turnos = new HashSet<>();
 
 
