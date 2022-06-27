@@ -7,12 +7,12 @@ import java.time.LocalDate;
 @Table(name = "Turnos")
 public class Turno {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.MERGE)
     @JoinColumn(name = "paciente_id", nullable = false)
     private Paciente paciente;
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.MERGE)
     @JoinColumn(name = "odontologo_id", nullable = false)
     private Odontologo odontologo;
     private LocalDate fecha;

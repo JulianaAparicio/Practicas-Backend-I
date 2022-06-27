@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -11,17 +12,18 @@ import java.util.Set;
 public class Paciente {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
     private String nombre;
     private String apellido;
     private String dni;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "domicilio_id")
     private Domicilio domicilio;
     private String email;
     private LocalDate fechaDeIngreso;
-    @OneToMany(mappedBy = "paciente")
-    @JsonIgnore
-    private Set<Turno> turnos;
+    @OneToMany(mappedBy = "paciente", fetch = FetchType.LAZY)
+    private Set<Turno> turnos = new HashSet<>();
 
 
     public Paciente(){

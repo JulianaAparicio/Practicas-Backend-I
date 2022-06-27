@@ -9,7 +9,7 @@ import java.util.Set;
 @Table(name = "Odontologos")
 public class Odontologo {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
     private String apellido;
     private String nombre;
