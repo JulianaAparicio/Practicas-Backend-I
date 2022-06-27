@@ -14,7 +14,7 @@ public class Odontologo {
     private String apellido;
     private String nombre;
     private String matricula;
-    @OneToMany(mappedBy = "odontologo")
+    @OneToMany(mappedBy = "odontologo", fetch = FetchType.EAGER)
     @JsonIgnore
     private Set<Turno> turnos;
 
