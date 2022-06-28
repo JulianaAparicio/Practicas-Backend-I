@@ -1,7 +1,7 @@
 package com.dh.clinicaOdontologica.service.impl;
 
 import com.dh.clinicaOdontologica.model.Paciente;
-import com.dh.clinicaOdontologica.model.PacienteDTO;
+import com.dh.clinicaOdontologica.model.dto.PacienteDTO;
 import com.dh.clinicaOdontologica.repository.IPacienteRepository;
 import com.dh.clinicaOdontologica.service.IPacienteService;
 import com.fasterxml.jackson.databind.ObjectMapper;

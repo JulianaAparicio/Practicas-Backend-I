@@ -1,4 +1,7 @@
-package com.dh.clinicaOdontologica.model;
+package com.dh.clinicaOdontologica.model.dto;
+
+import com.dh.clinicaOdontologica.model.Odontologo;
+import com.dh.clinicaOdontologica.model.Paciente;
 
 import java.time.LocalDate;
 

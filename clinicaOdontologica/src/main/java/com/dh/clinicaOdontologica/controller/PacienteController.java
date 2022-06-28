@@ -1,6 +1,6 @@
 package com.dh.clinicaOdontologica.controller;
 
-import com.dh.clinicaOdontologica.model.PacienteDTO;
+import com.dh.clinicaOdontologica.model.dto.PacienteDTO;
 import com.dh.clinicaOdontologica.service.IPacienteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
