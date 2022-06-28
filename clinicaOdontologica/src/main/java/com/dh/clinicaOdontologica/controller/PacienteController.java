@@ -7,6 +7,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Collection;
+
 @RestController
 @RequestMapping("/pacientes")
 public class PacienteController {
@@ -25,6 +27,11 @@ public class PacienteController {
         return pacienteService.buscarPacientePorId(id);
     }
 
+    @GetMapping
+    public Collection<PacienteDTO> listarTodosLosPacientes(){
+        return pacienteService.listarTodosLosPacientes();
+    }
+
     @PutMapping
     public ResponseEntity<?> modificarPaciente(@RequestBody PacienteDTO pacienteDTO){
         pacienteService.modificarPaciente(pacienteDTO);
@@ -35,6 +42,11 @@ public class PacienteController {
     public ResponseEntity<?> eliminarPaciente(@PathVariable Long id){
         pacienteService.eliminarPaciente(id);
         return ResponseEntity.ok(HttpStatus.OK);
+    }
+
+    @GetMapping("/{email}")
+    public PacienteDTO buscarPacientePorEmail(@PathVariable String email){
+        return pacienteService.buscarPacientePorEmail(email);
     }
 
 

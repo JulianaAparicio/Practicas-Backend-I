@@ -8,6 +8,6 @@ public interface ITurnoService {
     void crearTurno(TurnoDTO turnoDTO);
     TurnoDTO buscarTurno(Long id);
     void modificarTurno(TurnoDTO turnoDTO);
-    void eliminarTurno(Long id);
+    boolean eliminarTurno(Long id);
     Set<TurnoDTO> listarTodosLosTurnos();
 }

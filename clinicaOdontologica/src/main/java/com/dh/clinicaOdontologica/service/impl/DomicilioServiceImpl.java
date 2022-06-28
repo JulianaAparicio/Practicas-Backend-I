@@ -32,8 +32,8 @@ public class DomicilioServiceImpl implements IDomicilioService {
     }
 
     @Override
-    public void eliminarDomicilio(Long id) {
-
+    public boolean eliminarDomicilio(Long id) {
+        return false;
     }
 
     @Override

@@ -28,7 +28,7 @@ public class OdontologoServiceImpl implements IOdontologoService {
     }
 
     @Override
-    public OdontologoDTO buscarOdontologo(Long id) {
+    public OdontologoDTO buscarOdontologoPorId(Long id) {
         Optional<Odontologo> odontologo = odontologoRepository.findById(id);
         OdontologoDTO odontologoDTO = null;
         if(odontologo.isPresent()){
@@ -48,8 +48,14 @@ public class OdontologoServiceImpl implements IOdontologoService {
     }
 
     @Override
-    public void eliminarOdontologo(Long id) {
-        odontologoRepository.deleteById(id);
+    public boolean eliminarOdontologo(Long id) {
+        boolean resultado = false;
+        Optional<Odontologo> busqueda = odontologoRepository.findById(id);
+        if(busqueda.isPresent()){
+            odontologoRepository.delete(busqueda.get());
+            resultado = true;
+        }
+        return resultado;
     }
 
     @Override

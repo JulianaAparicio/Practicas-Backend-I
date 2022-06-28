@@ -48,8 +48,14 @@ public class PacienteServiceImpl implements IPacienteService {
     }
 
     @Override
-    public void eliminarPaciente(Long id) {
-        pacienteRepository.deleteById(id);
+    public boolean eliminarPaciente(Long id) {
+        boolean resultado = false;
+        Optional<Paciente> busqueda = pacienteRepository.findById(id);
+        if(busqueda.isPresent()){
+            pacienteRepository.delete(busqueda.get());
+            resultado = true;
+        }
+        return resultado;
     }
 
     @Override
@@ -61,5 +67,15 @@ public class PacienteServiceImpl implements IPacienteService {
             pacientesDTO.add(mapper.convertValue(paciente,PacienteDTO.class));
         }
         return pacientesDTO;
+    }
+
+    @Override
+    public PacienteDTO buscarPacientePorEmail(String email) {
+        Paciente paciente = pacienteRepository.buscarPacientePorEmail(email);
+        PacienteDTO pacienteDTO = null;
+        if(paciente != null){
+            pacienteDTO = mapper.convertValue(paciente,PacienteDTO.class);
+        }
+        return pacienteDTO;
     }
 }

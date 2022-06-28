@@ -48,8 +48,14 @@ public class TurnoServiceImpl implements ITurnoService {
     }
 
     @Override
-    public void eliminarTurno(Long id) {
-        turnoRepository.deleteById(id);
+    public boolean eliminarTurno(Long id) {
+        boolean resultado = false;
+        Optional<Turno> busqueda = turnoRepository.findById(id);
+        if(busqueda.isPresent()){
+            turnoRepository.delete(busqueda.get());
+            resultado = true;
+        }
+        return resultado;
     }
 
     @Override

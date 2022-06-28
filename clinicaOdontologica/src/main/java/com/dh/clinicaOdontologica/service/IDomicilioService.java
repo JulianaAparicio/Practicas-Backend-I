@@ -8,6 +8,6 @@ public interface IDomicilioService {
     void crearDomicilio(DomicilioDTO domicilioDTO);
     DomicilioDTO buscarDomicilio(Long id);
     void modificarDomicilio(DomicilioDTO domicilioDTO);
-    void eliminarDomicilio(Long id);
+    boolean eliminarDomicilio(Long id);
     Set<DomicilioDTO> listarTodosLosDomicilios();
 }
