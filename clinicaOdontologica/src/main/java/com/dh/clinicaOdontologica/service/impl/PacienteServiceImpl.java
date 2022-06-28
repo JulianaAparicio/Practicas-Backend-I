@@ -48,14 +48,13 @@ public class PacienteServiceImpl implements IPacienteService {
     }
 
     @Override
-    public boolean eliminarPaciente(Long id) {
+    public void eliminarPaciente(Long id) {
         boolean resultado = false;
         Optional<Paciente> busqueda = pacienteRepository.findById(id);
         if(busqueda.isPresent()){
             pacienteRepository.delete(busqueda.get());
             resultado = true;
         }
-        return resultado;
     }
 
     @Override

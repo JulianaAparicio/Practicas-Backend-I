@@ -8,6 +8,6 @@ public interface IOdontologoService {
     void crearOdontologo(OdontologoDTO odontologoDTO);
     OdontologoDTO buscarOdontologoPorId(Long id);
     void modificarOdontologo(OdontologoDTO odontologoDTO);
-    boolean eliminarOdontologo(Long id);
+    void eliminarOdontologo(Long id);
     Set<OdontologoDTO> listarTodosLosOdontologos();
 }

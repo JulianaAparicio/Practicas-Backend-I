@@ -9,7 +9,7 @@ public interface IPacienteService {
     void crearPaciente(PacienteDTO pacienteDTO);
     PacienteDTO buscarPacientePorId(Long id);
     void modificarPaciente(PacienteDTO pacienteDTO);
-    boolean eliminarPaciente(Long id);
+    void eliminarPaciente(Long id);
     Set<PacienteDTO> listarTodosLosPacientes();
     PacienteDTO buscarPacientePorEmail(String email);
 }
