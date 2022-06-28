@@ -1,6 +1,6 @@
 package com.dh.clinicaOdontologica.service.impl;
 
-import com.dh.clinicaOdontologica.model.dto.DomicilioDTO;
+import com.dh.clinicaOdontologica.model.Domicilio;
 import com.dh.clinicaOdontologica.repository.IDomicilioRepository;
 import com.dh.clinicaOdontologica.service.IDomicilioService;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -17,17 +17,17 @@ public class DomicilioServiceImpl implements IDomicilioService {
     ObjectMapper mapper;
 
     @Override
-    public void crearDomicilio(DomicilioDTO domicilioDTO) {
+    public void crearDomicilio(Domicilio domicilio) {
 
     }
 
     @Override
-    public DomicilioDTO buscarDomicilio(Long id) {
+    public Domicilio buscarDomicilio(Long id) {
         return null;
     }
 
     @Override
-    public void modificarDomicilio(DomicilioDTO domicilioDTO) {
+    public void modificarDomicilio(Domicilio domicilio) {
 
     }
 
@@ -37,7 +37,7 @@ public class DomicilioServiceImpl implements IDomicilioService {
     }
 
     @Override
-    public Set<DomicilioDTO> listarTodosLosDomicilios() {
+    public Set<Domicilio> listarTodosLosDomicilios() {
         return null;
     }
 }
