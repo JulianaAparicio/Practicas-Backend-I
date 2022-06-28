@@ -1,5 +1,7 @@
 package com.dh.clinicaOdontologica.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.HashSet;
@@ -16,12 +18,13 @@ public class Paciente {
     private String nombre;
     private String apellido;
     private String dni;
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinColumn(name = "domicilio_id")
     private Domicilio domicilio;
     private String email;
     private LocalDate fechaDeIngreso;
     @OneToMany(mappedBy = "paciente", fetch = FetchType.EAGER)
+    @JsonIgnore
     private Set<Turno> turnos = new HashSet<>();
 
 

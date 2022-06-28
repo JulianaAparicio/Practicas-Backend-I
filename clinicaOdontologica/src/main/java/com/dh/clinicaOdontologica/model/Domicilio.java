@@ -12,6 +12,9 @@ public class Domicilio {
     private String numero;
     private String localidad;
     private String provincia;
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JoinColumn(name = "paciente_id")
+    private Paciente paciente;
 
     public Domicilio() {
     }
