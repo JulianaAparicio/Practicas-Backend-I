@@ -7,7 +7,8 @@ import java.time.LocalDate;
 @Table(name = "Turnos")
 public class Turno {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @SequenceGenerator(name = "turno_sequence", sequenceName = "turno_sequence")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "turno_sequence")
     private Long id;
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.MERGE)
     @JoinColumn(name = "paciente_id", nullable = false)

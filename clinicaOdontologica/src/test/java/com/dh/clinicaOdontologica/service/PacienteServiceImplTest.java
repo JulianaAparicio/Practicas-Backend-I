@@ -8,7 +8,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
-class PacienteServiceTest {
+class PacienteServiceImplTest {
 
     @Autowired
     private IPacienteService pacienteService;
@@ -21,7 +21,7 @@ class PacienteServiceTest {
         pacienteDTO.setNombre("Florencia");
         pacienteService.crearPaciente(pacienteDTO);
         // Cambiar antes de ejecutar:
-        PacienteDTO pacienteTest = pacienteService.buscarPaciente(1L);
+        PacienteDTO pacienteTest = pacienteService.buscarPacientePorId(1L);
 
         assertNotNull(pacienteTest);
     }

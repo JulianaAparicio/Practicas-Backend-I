@@ -1,13 +1,14 @@
-package com.dh.clinicaOdontologica.service;
+package com.dh.clinicaOdontologica.service.impl;
 
 import com.dh.clinicaOdontologica.model.DomicilioDTO;
 import com.dh.clinicaOdontologica.repository.IDomicilioRepository;
+import com.dh.clinicaOdontologica.service.IDomicilioService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.Set;
 
-public class DomicilioService implements IDomicilioService{
+public class DomicilioServiceImpl implements IDomicilioService {
 
     @Autowired
     private IDomicilioRepository domicilioRepository;

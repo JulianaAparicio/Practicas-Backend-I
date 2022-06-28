@@ -7,7 +7,7 @@ import java.util.Set;
 public interface IPacienteService {
 
     void crearPaciente(PacienteDTO pacienteDTO);
-    PacienteDTO buscarPaciente(Long id);
+    PacienteDTO buscarPacientePorId(Long id);
     void modificarPaciente(PacienteDTO pacienteDTO);
     void eliminarPaciente(Long id);
     Set<PacienteDTO> listarTodosLosPacientes();

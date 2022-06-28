@@ -1,8 +1,9 @@
-package com.dh.clinicaOdontologica.service;
+package com.dh.clinicaOdontologica.service.impl;
 
 import com.dh.clinicaOdontologica.model.Paciente;
 import com.dh.clinicaOdontologica.model.PacienteDTO;
 import com.dh.clinicaOdontologica.repository.IPacienteRepository;
+import com.dh.clinicaOdontologica.service.IPacienteService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import java.util.Set;
 
 @Service
-public class PacienteService implements IPacienteService{
+public class PacienteServiceImpl implements IPacienteService {
 
     @Autowired
     private IPacienteRepository pacienteRepository;
@@ -27,7 +28,7 @@ public class PacienteService implements IPacienteService{
     }
 
     @Override
-    public PacienteDTO buscarPaciente(Long id) {
+    public PacienteDTO buscarPacientePorId(Long id) {
         Optional<Paciente> paciente = pacienteRepository.findById(id);
         PacienteDTO pacienteDTO = null;
         if(paciente.isPresent()){
