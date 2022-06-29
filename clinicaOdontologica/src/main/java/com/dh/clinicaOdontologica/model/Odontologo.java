@@ -1,60 +1,35 @@
 package com.dh.clinicaOdontologica.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.Set;
 
+@Getter
+@Setter
 @Entity
 @Table(name = "Odontologos")
+
 public class Odontologo {
     @Id
     @SequenceGenerator(name = "odontologo_sequence", sequenceName = "odontologo_sequence")
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "odontologo_sequence")
     private Long id;
+
     private String apellido;
+
     private String nombre;
+
+    @Column(name = "numero_matricula")
     private String matricula;
-    @OneToMany(mappedBy = "odontologo", fetch = FetchType.EAGER)
+
+    @OneToMany(mappedBy = "odontologo", cascade = CascadeType.ALL)
     @JsonIgnore
     private Set<Turno> turnos;
 
     public Odontologo() {
     }
 
-    public Long getId() {
-        return id;
-    }
-
-    public String getApellido() {
-        return apellido;
-    }
-
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getMatricula() {
-        return matricula;
-    }
-
-    public void setMatricula(String matricula) {
-        this.matricula = matricula;
-    }
-
-    public Set<Turno> getTurnos() {
-        return turnos;
-    }
-
-    public void setTurnos(Set<Turno> turnos) {
-        this.turnos = turnos;
-    }
 }

@@ -7,6 +7,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Collection;
+
 @RestController
 @RequestMapping("/odontologos")
 public class OdontologoController {
@@ -22,6 +24,11 @@ public class OdontologoController {
     @GetMapping("/{id}")
     public OdontologoDTO buscarOdontologoPorId(@PathVariable Long id){
         return odontologoService.buscarOdontologoPorId(id);
+    }
+
+    @GetMapping
+    public Collection<OdontologoDTO> listarTodosLosOdontologos(){
+        return odontologoService.listarTodosLosOdontologos();
     }
 
     @PutMapping

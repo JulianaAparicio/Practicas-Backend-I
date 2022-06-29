@@ -49,11 +49,9 @@ public class OdontologoServiceImpl implements IOdontologoService {
 
     @Override
     public void eliminarOdontologo(Long id) {
-        boolean resultado = false;
         Optional<Odontologo> busqueda = odontologoRepository.findById(id);
         if(busqueda.isPresent()){
             odontologoRepository.delete(busqueda.get());
-            resultado = true;
         }
     }
 

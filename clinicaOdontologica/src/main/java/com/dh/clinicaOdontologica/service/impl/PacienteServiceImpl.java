@@ -24,7 +24,9 @@ public class PacienteServiceImpl implements IPacienteService {
 
     @Override
     public void crearPaciente(PacienteDTO pacienteDTO) {
-        guardarPaciente(pacienteDTO);
+        if (pacienteDTO != null){
+            guardarPaciente(pacienteDTO);
+        }
     }
 
     @Override
@@ -44,16 +46,16 @@ public class PacienteServiceImpl implements IPacienteService {
 
     @Override
     public void modificarPaciente(PacienteDTO pacienteDTO) {
-        guardarPaciente(pacienteDTO);
+        if (pacienteDTO != null){
+            guardarPaciente(pacienteDTO);
+        }
     }
 
     @Override
     public void eliminarPaciente(Long id) {
-        boolean resultado = false;
         Optional<Paciente> busqueda = pacienteRepository.findById(id);
         if(busqueda.isPresent()){
             pacienteRepository.delete(busqueda.get());
-            resultado = true;
         }
     }
 

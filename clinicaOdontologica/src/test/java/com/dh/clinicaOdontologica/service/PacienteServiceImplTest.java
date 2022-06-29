@@ -17,8 +17,9 @@ class PacienteServiceImplTest {
     public void deberiaCrearUnPaciente(){
 
         PacienteDTO pacienteDTO = new PacienteDTO();
-        pacienteDTO.setApellido("Arriola");
-        pacienteDTO.setNombre("Florencia");
+        pacienteDTO.setApellido("Aparicio");
+        pacienteDTO.setNombre("Juliana");
+        pacienteDTO.setDni("35821141");
         pacienteService.crearPaciente(pacienteDTO);
         // Cambiar antes de ejecutar:
         PacienteDTO pacienteTest = pacienteService.buscarPacientePorId(1L);

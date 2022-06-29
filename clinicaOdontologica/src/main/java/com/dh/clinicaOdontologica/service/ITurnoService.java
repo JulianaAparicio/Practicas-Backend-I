@@ -6,8 +6,8 @@ import java.util.Set;
 
 public interface ITurnoService {
     void crearTurno(TurnoDTO turnoDTO);
-    TurnoDTO buscarTurno(Long id);
+    TurnoDTO buscarTurnoPorId(Long id);
     void modificarTurno(TurnoDTO turnoDTO);
-    boolean eliminarTurno(Long id);
+    void eliminarTurno(Long id);
     Set<TurnoDTO> listarTodosLosTurnos();
 }

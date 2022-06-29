@@ -6,6 +6,8 @@ public class PacienteDTO {
     private Long id;
     private String nombre;
     private String apellido;
+    private String email;
+    private String dni;
     private Domicilio domicilio;
 
     public Long getId() {
@@ -28,6 +30,22 @@ public class PacienteDTO {
         this.apellido = apellido;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getDni() {
+        return dni;
+    }
+
+    public void setDni(String dni) {
+        this.dni = dni;
+    }
+
     public Domicilio getDomicilio() {
         return domicilio;
     }
@@ -35,4 +53,5 @@ public class PacienteDTO {
     public void setDomicilio(Domicilio domicilio) {
         this.domicilio = domicilio;
     }
+
 }

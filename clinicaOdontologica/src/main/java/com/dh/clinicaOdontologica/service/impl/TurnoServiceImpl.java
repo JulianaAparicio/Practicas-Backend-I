@@ -28,7 +28,7 @@ public class TurnoServiceImpl implements ITurnoService {
     }
 
     @Override
-    public TurnoDTO buscarTurno(Long id) {
+    public TurnoDTO buscarTurnoPorId(Long id) {
         Optional<Turno> turno = turnoRepository.findById(id);
         TurnoDTO turnoDTO = null;
         if(turno.isPresent()){
@@ -48,14 +48,11 @@ public class TurnoServiceImpl implements ITurnoService {
     }
 
     @Override
-    public boolean eliminarTurno(Long id) {
-        boolean resultado = false;
+    public void eliminarTurno(Long id) {
         Optional<Turno> busqueda = turnoRepository.findById(id);
         if(busqueda.isPresent()){
             turnoRepository.delete(busqueda.get());
-            resultado = true;
         }
-        return resultado;
     }
 
     @Override
