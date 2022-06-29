@@ -20,7 +20,6 @@ class PacienteServiceImplTest {
         PacienteDTO pacienteDTO = new PacienteDTO();
         pacienteDTO.setApellido("Apellido Paciente Test");
         pacienteDTO.setNombre("Nombre Paciente Test");
-        pacienteDTO.setDni("11111111");
         pacienteService.crearPaciente(pacienteDTO);
 
         PacienteDTO pacienteTest = pacienteService.buscarPacientePorId(1L);

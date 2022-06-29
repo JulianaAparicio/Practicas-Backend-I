@@ -16,7 +16,7 @@ public class PacienteController {
     @Autowired
     private IPacienteService pacienteService;
 
-    @PostMapping
+    @PostMapping()
     public ResponseEntity<?> crearPaciente(@RequestBody PacienteDTO pacienteDTO){
     pacienteService.crearPaciente(pacienteDTO);
     return ResponseEntity.ok(HttpStatus.OK);
