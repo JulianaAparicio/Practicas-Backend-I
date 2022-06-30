@@ -16,14 +16,14 @@ class PacienteServiceImplTest {
 
     @Test
     public void deberiaCrearUnPaciente(){
-
+        // Dado
         PacienteDTO pacienteDTO = new PacienteDTO();
         pacienteDTO.setApellido("Apellido Paciente Test");
         pacienteDTO.setNombre("Nombre Paciente Test");
+        // Cuando
         pacienteService.crearPaciente(pacienteDTO);
-
         PacienteDTO pacienteTest = pacienteService.buscarPacientePorId(1L);
-
+        // Entonces
         assertNotNull(pacienteTest);
     }
 
