@@ -44,7 +44,7 @@ public class PacienteController {
         return ResponseEntity.ok(HttpStatus.OK);
     }
 
-    @GetMapping("/{email}")
+    @GetMapping("/buscarPorEmail/{email}")
     public PacienteDTO buscarPacientePorEmail(@PathVariable String email){
         return pacienteService.buscarPacientePorEmail(email);
     }
