@@ -5,6 +5,8 @@ import com.dh.clinicaOdontologica.model.Paciente;
 import com.dh.clinicaOdontologica.model.dto.TurnoDTO;
 import com.dh.clinicaOdontologica.service.ITurnoService;
 import org.junit.jupiter.api.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.JUnit4;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -12,6 +14,7 @@ import java.time.LocalDate;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+@RunWith(JUnit4.class)
 @SpringBootTest
 class TurnoServiceImplTest {
 

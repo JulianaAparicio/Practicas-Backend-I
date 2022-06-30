@@ -3,11 +3,14 @@ package com.dh.clinicaOdontologica.service.impl;
 import com.dh.clinicaOdontologica.model.dto.PacienteDTO;
 import com.dh.clinicaOdontologica.service.IPacienteService;
 import org.junit.jupiter.api.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.JUnit4;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+@RunWith(JUnit4.class)
 @SpringBootTest
 class PacienteServiceImplTest {
 
