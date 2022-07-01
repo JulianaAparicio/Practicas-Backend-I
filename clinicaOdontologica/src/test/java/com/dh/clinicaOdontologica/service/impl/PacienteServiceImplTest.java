@@ -2,6 +2,7 @@ package com.dh.clinicaOdontologica.service.impl;
 
 import com.dh.clinicaOdontologica.model.dto.PacienteDTO;
 import com.dh.clinicaOdontologica.service.IPacienteService;
+import org.junit.Before;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
@@ -18,16 +19,33 @@ class PacienteServiceImplTest {
     private IPacienteService pacienteService;
 
     @Test
+    @Before
     public void deberiaCrearUnPaciente(){
         // Dado
         PacienteDTO pacienteDTO = new PacienteDTO();
         pacienteDTO.setApellido("Apellido Paciente Test");
         pacienteDTO.setNombre("Nombre Paciente Test");
+
         // Cuando
         pacienteService.crearPaciente(pacienteDTO);
         PacienteDTO pacienteTest = pacienteService.buscarPacientePorId(1L);
         // Entonces
         assertNotNull(pacienteTest);
     }
+
+    /*@Test
+    public void deberiaModificarUnPaciente(){
+        // Dado
+
+        // Cuando
+        pacienteService.modificarPaciente(pacienteDTO);
+        PacienteDTO pacienteTest = pacienteService.buscarPacientePorId(1L);
+        // Entonces
+        assertNotNull(pacienteTest);
+    }*/
+
+
+
+
 
 }
