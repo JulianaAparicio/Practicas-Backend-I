@@ -5,6 +5,7 @@ import com.dh.clinicaOdontologica.model.dto.PacienteDTO;
 import com.dh.clinicaOdontologica.repository.IPacienteRepository;
 import com.dh.clinicaOdontologica.service.IPacienteService;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -22,15 +23,20 @@ public class PacienteServiceImpl implements IPacienteService {
     @Autowired
     ObjectMapper mapper;
 
+    @Autowired
+    Logger logger;
+
     @Override
     public void crearPaciente(PacienteDTO pacienteDTO) {
         if (pacienteDTO != null){
+            logger.info("Creando paciente...");
             guardarPaciente(pacienteDTO);
         }
     }
 
     @Override
     public PacienteDTO buscarPacientePorId(Long id) {
+        logger.info("Buscando paciente con id: " + id);
         Optional<Paciente> paciente = pacienteRepository.findById(id);
         PacienteDTO pacienteDTO = null;
         if(paciente.isPresent()){
@@ -40,6 +46,7 @@ public class PacienteServiceImpl implements IPacienteService {
     }
 
     private void guardarPaciente(PacienteDTO pacienteDTO){
+        logger.info("Guardando paciente");
         Paciente paciente = mapper.convertValue(pacienteDTO,Paciente.class);
         pacienteRepository.save(paciente);
     }
@@ -47,6 +54,7 @@ public class PacienteServiceImpl implements IPacienteService {
     @Override
     public void modificarPaciente(PacienteDTO pacienteDTO) {
         if (pacienteDTO != null){
+            logger.info("Modificando paciente");
             guardarPaciente(pacienteDTO);
         }
     }
@@ -55,6 +63,7 @@ public class PacienteServiceImpl implements IPacienteService {
     public void eliminarPaciente(Long id) {
         Optional<Paciente> busqueda = pacienteRepository.findById(id);
         if(busqueda.isPresent()){
+            logger.info("Eliminando el paciente con id: " + id);
             pacienteRepository.delete(busqueda.get());
         }
     }
@@ -67,6 +76,7 @@ public class PacienteServiceImpl implements IPacienteService {
         for (Paciente paciente : pacientes){
             pacientesDTO.add(mapper.convertValue(paciente,PacienteDTO.class));
         }
+        logger.info("Listando todos los pacientes");
         return pacientesDTO;
     }
 
@@ -74,6 +84,7 @@ public class PacienteServiceImpl implements IPacienteService {
     public PacienteDTO buscarPacientePorEmail(String email) {
         Paciente paciente = pacienteRepository.buscarPacientePorEmail(email);
         PacienteDTO pacienteDTO = null;
+        logger.info("Buscando paciente con email: " + email);
         if(paciente != null){
             pacienteDTO = mapper.convertValue(paciente,PacienteDTO.class);
         }
