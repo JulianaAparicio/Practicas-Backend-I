@@ -5,6 +5,7 @@ import com.dh.clinicaOdontologica.model.dto.TurnoDTO;
 import com.dh.clinicaOdontologica.repository.ITurnoRepository;
 import com.dh.clinicaOdontologica.service.ITurnoService;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,15 +21,22 @@ public class TurnoServiceImpl implements ITurnoService {
     private ITurnoRepository turnoRepository;
 
     @Autowired
+    private Logger logger;
+
+    @Autowired
     ObjectMapper mapper;
 
     @Override
     public void crearTurno(TurnoDTO turnoDTO) {
-        guardarTurno(turnoDTO);
+        if (turnoDTO != null){
+            logger.info("Creando turno...");
+            guardarTurno(turnoDTO);
+        }
     }
 
     @Override
     public TurnoDTO buscarTurnoPorId(Long id) {
+        logger.info("Buscando turno con id: " + id);
         Optional<Turno> turno = turnoRepository.findById(id);
         TurnoDTO turnoDTO = null;
         if(turno.isPresent()){
@@ -38,19 +46,24 @@ public class TurnoServiceImpl implements ITurnoService {
     }
 
     private void guardarTurno(TurnoDTO turnoDTO){
+        logger.info("Guardando turno");
         Turno turno = mapper.convertValue(turnoDTO,Turno.class);
         turnoRepository.save(turno);
     }
 
     @Override
     public void modificarTurno(TurnoDTO turnoDTO) {
-        guardarTurno(turnoDTO);
+        if (turnoDTO != null) {
+            logger.info("Modificando turno");
+            guardarTurno(turnoDTO);
+        }
     }
 
     @Override
     public void eliminarTurno(Long id) {
         Optional<Turno> busqueda = turnoRepository.findById(id);
         if(busqueda.isPresent()){
+            logger.info("Eliminando el turno con id: " + id);
             turnoRepository.delete(busqueda.get());
         }
     }
@@ -63,6 +76,7 @@ public class TurnoServiceImpl implements ITurnoService {
         for (Turno turno : turnos){
             turnosDTO.add(mapper.convertValue(turno,TurnoDTO.class));
         }
+        logger.info("Listando todos los turnos");
         return turnosDTO;
     }
 }
