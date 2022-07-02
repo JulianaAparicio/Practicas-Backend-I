@@ -23,7 +23,6 @@ public class OdontologoServiceImpl implements IOdontologoService {
     @Autowired
     ObjectMapper mapper;
 
-    @Autowired
     private Logger logger;
 
     @Override
@@ -77,5 +76,6 @@ public class OdontologoServiceImpl implements IOdontologoService {
             odontologosDTO.add(mapper.convertValue(odontologo,OdontologoDTO.class));
         }
         logger.info("Listando todos los odontologos");
-        return odontologosDTO;    }
+        return odontologosDTO;
+    }
 }

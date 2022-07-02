@@ -18,6 +18,7 @@ class PacienteServiceImplTest {
     @Autowired
     private IPacienteService pacienteService;
 
+
     @Test
     @Before
     public void deberiaCrearUnPaciente(){
@@ -33,19 +34,22 @@ class PacienteServiceImplTest {
         assertNotNull(pacienteTest);
     }
 
-    /*@Test
+    @Test
     public void deberiaModificarUnPaciente(){
         // Dado
+        PacienteDTO pacienteDTO1 = new PacienteDTO();
+        pacienteDTO1.setApellido("Apellido Paciente Test 1");
+        pacienteDTO1.setNombre("Nombre Paciente Test 1");
+
+        PacienteDTO pacienteDTO2 = new PacienteDTO();
+        pacienteDTO2.setApellido("Apellido Paciente Test 2");
+        pacienteDTO2.setNombre("Nombre Paciente Test 2");
 
         // Cuando
-        pacienteService.modificarPaciente(pacienteDTO);
-        PacienteDTO pacienteTest = pacienteService.buscarPacientePorId(1L);
+        pacienteService.modificarPaciente(pacienteDTO2);
         // Entonces
-        assertNotNull(pacienteTest);
-    }*/
-
-
-
+        assertEquals(pacienteDTO2,pacienteDTO1);
+    }
 
 
 }

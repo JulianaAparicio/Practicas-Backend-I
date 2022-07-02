@@ -20,7 +20,6 @@ public class TurnoServiceImpl implements ITurnoService {
     @Autowired
     private ITurnoRepository turnoRepository;
 
-    @Autowired
     private Logger logger;
 
     @Autowired

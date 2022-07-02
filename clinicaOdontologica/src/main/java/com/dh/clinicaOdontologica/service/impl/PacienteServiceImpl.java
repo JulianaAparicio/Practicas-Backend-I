@@ -23,7 +23,6 @@ public class PacienteServiceImpl implements IPacienteService {
     @Autowired
     ObjectMapper mapper;
 
-    @Autowired
     private Logger logger;
 
     @Override
