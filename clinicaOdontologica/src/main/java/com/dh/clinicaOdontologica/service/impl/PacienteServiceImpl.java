@@ -23,7 +23,7 @@ public class PacienteServiceImpl implements IPacienteService {
     @Autowired
     ObjectMapper mapper;
 
-    private Logger logger;
+    private Logger logger = Logger.getLogger(PacienteServiceImpl.class);
 
     @Override
     public void crearPaciente(PacienteDTO pacienteDTO) {

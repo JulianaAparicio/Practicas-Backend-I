@@ -5,7 +5,7 @@ import com.dh.clinicaOdontologica.model.dto.OdontologoDTO;
 import com.dh.clinicaOdontologica.repository.IOdontologoRepository;
 import com.dh.clinicaOdontologica.service.IOdontologoService;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.apache.logging.log4j.Logger;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -23,7 +23,7 @@ public class OdontologoServiceImpl implements IOdontologoService {
     @Autowired
     ObjectMapper mapper;
 
-    private Logger logger;
+    private Logger logger = Logger.getLogger(OdontologoServiceImpl.class);
 
     @Override
     public void crearOdontologo(OdontologoDTO odontologoDTO) {
