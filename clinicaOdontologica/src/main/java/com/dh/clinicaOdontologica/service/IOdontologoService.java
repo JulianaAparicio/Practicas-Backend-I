@@ -1,6 +1,6 @@
 package com.dh.clinicaOdontologica.service;
 
-import com.dh.clinicaOdontologica.model.dto.OdontologoDTO;
+import com.dh.clinicaOdontologica.dto.OdontologoDTO;
 
 import java.util.Set;
 

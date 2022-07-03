@@ -1,7 +1,7 @@
 package com.dh.clinicaOdontologica.service.impl;
 
 import com.dh.clinicaOdontologica.model.Odontologo;
-import com.dh.clinicaOdontologica.model.dto.OdontologoDTO;
+import com.dh.clinicaOdontologica.dto.OdontologoDTO;
 import com.dh.clinicaOdontologica.repository.IOdontologoRepository;
 import com.dh.clinicaOdontologica.service.IOdontologoService;
 import com.fasterxml.jackson.databind.ObjectMapper;

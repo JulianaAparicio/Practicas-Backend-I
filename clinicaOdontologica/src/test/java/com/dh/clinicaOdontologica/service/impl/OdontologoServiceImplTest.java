@@ -1,6 +1,6 @@
 package com.dh.clinicaOdontologica.service.impl;
 
-import com.dh.clinicaOdontologica.model.dto.OdontologoDTO;
+import com.dh.clinicaOdontologica.dto.OdontologoDTO;
 import com.dh.clinicaOdontologica.service.IOdontologoService;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;

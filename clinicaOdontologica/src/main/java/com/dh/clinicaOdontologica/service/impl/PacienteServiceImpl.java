@@ -1,7 +1,8 @@
 package com.dh.clinicaOdontologica.service.impl;
 
+import com.dh.clinicaOdontologica.exceptions.ResourceNotFoundException;
 import com.dh.clinicaOdontologica.model.Paciente;
-import com.dh.clinicaOdontologica.model.dto.PacienteDTO;
+import com.dh.clinicaOdontologica.dto.PacienteDTO;
 import com.dh.clinicaOdontologica.repository.IPacienteRepository;
 import com.dh.clinicaOdontologica.service.IPacienteService;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -59,12 +60,12 @@ public class PacienteServiceImpl implements IPacienteService {
     }
 
     @Override
-    public void eliminarPaciente(Long id) {
-        Optional<Paciente> busqueda = pacienteRepository.findById(id);
-        if(busqueda.isPresent()){
-            logger.info("Eliminando el paciente con id: " + id);
-            pacienteRepository.delete(busqueda.get());
+    public void eliminarPaciente(Long id) throws ResourceNotFoundException {
+        if (pacienteRepository.findById(id).isEmpty()){
+            throw new ResourceNotFoundException("No existe un paciente con id: " + id);
         }
+        logger.info("Eliminando el paciente con id: " + id);
+        pacienteRepository.delete(pacienteRepository.findById(id).get());
     }
 
     @Override

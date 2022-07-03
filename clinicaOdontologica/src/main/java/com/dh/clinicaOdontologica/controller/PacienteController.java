@@ -1,6 +1,7 @@
 package com.dh.clinicaOdontologica.controller;
 
-import com.dh.clinicaOdontologica.model.dto.PacienteDTO;
+import com.dh.clinicaOdontologica.dto.PacienteDTO;
+import com.dh.clinicaOdontologica.exceptions.ResourceNotFoundException;
 import com.dh.clinicaOdontologica.service.IPacienteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -39,9 +40,9 @@ public class PacienteController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<?> eliminarPaciente(@PathVariable Long id){
+    public ResponseEntity<?> eliminarPaciente(@PathVariable Long id) throws ResourceNotFoundException {
         pacienteService.eliminarPaciente(id);
-        return ResponseEntity.ok(HttpStatus.OK);
+        return ResponseEntity.ok("Eliminado");
     }
 
     @GetMapping("/buscarPorEmail/{email}")

@@ -1,6 +1,6 @@
 package com.dh.clinicaOdontologica.service.impl;
 
-import com.dh.clinicaOdontologica.model.dto.PacienteDTO;
+import com.dh.clinicaOdontologica.dto.PacienteDTO;
 import com.dh.clinicaOdontologica.service.IPacienteService;
 import org.junit.Before;
 import org.junit.jupiter.api.Test;

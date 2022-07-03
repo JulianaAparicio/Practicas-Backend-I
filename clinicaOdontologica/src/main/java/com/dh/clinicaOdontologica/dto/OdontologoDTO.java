@@ -1,4 +1,4 @@
-package com.dh.clinicaOdontologica.model.dto;
+package com.dh.clinicaOdontologica.dto;
 
 import lombok.Getter;
 import lombok.Setter;

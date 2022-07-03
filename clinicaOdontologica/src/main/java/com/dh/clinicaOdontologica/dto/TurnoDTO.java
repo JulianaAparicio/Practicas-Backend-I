@@ -1,4 +1,4 @@
-package com.dh.clinicaOdontologica.model.dto;
+package com.dh.clinicaOdontologica.dto;
 
 import com.dh.clinicaOdontologica.model.Odontologo;
 import com.dh.clinicaOdontologica.model.Paciente;

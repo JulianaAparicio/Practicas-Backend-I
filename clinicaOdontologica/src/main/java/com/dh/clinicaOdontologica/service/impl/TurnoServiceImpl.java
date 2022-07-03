@@ -1,7 +1,7 @@
 package com.dh.clinicaOdontologica.service.impl;
 
 import com.dh.clinicaOdontologica.model.Turno;
-import com.dh.clinicaOdontologica.model.dto.TurnoDTO;
+import com.dh.clinicaOdontologica.dto.TurnoDTO;
 import com.dh.clinicaOdontologica.repository.ITurnoRepository;
 import com.dh.clinicaOdontologica.service.ITurnoService;
 import com.fasterxml.jackson.databind.ObjectMapper;
