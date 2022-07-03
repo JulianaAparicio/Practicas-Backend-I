@@ -23,7 +23,7 @@ public class OdontologoServiceImpl implements IOdontologoService {
     @Autowired
     ObjectMapper mapper;
 
-    private Logger logger = Logger.getLogger(OdontologoServiceImpl.class);
+    private final Logger logger = Logger.getLogger(OdontologoServiceImpl.class);
 
     @Override
     public void crearOdontologo(OdontologoDTO odontologoDTO) {

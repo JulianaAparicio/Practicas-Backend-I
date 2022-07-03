@@ -20,7 +20,7 @@ public class TurnoServiceImpl implements ITurnoService {
     @Autowired
     private ITurnoRepository turnoRepository;
 
-    private Logger logger = Logger.getLogger(TurnoServiceImpl.class);
+    private final Logger logger = Logger.getLogger(TurnoServiceImpl.class);
 
     @Autowired
     ObjectMapper mapper;
