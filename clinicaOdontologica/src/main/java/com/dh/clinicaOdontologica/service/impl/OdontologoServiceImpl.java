@@ -28,14 +28,14 @@ public class OdontologoServiceImpl implements IOdontologoService {
     @Override
     public void crearOdontologo(OdontologoDTO odontologoDTO) {
         if (odontologoDTO != null) {
-            logger.info("Creando odontologo...");
+            logger.debug("Creando odontologo...");
             guardarOdontologo(odontologoDTO);
         }
     }
 
     @Override
     public OdontologoDTO buscarOdontologoPorId(Long id) {
-        logger.info("Buscando odontologo con id: " + id);
+        logger.debug("Buscando odontologo con id: " + id);
         Optional<Odontologo> odontologo = odontologoRepository.findById(id);
         OdontologoDTO odontologoDTO = null;
         if(odontologo.isPresent()){
@@ -45,7 +45,7 @@ public class OdontologoServiceImpl implements IOdontologoService {
     }
 
     private void guardarOdontologo(OdontologoDTO odontologoDTO){
-        logger.info("Guardando odontologo");
+        logger.debug("Guardando odontologo");
         Odontologo odontologo = mapper.convertValue(odontologoDTO, Odontologo.class);
         odontologoRepository.save(odontologo);
     }
@@ -53,7 +53,7 @@ public class OdontologoServiceImpl implements IOdontologoService {
     @Override
     public void modificarOdontologo(OdontologoDTO odontologoDTO) {
         if(odontologoDTO != null) {
-            logger.info("Modificando odontologo");
+            logger.debug("Modificando odontologo");
             guardarOdontologo(odontologoDTO);
         }
     }
@@ -62,7 +62,7 @@ public class OdontologoServiceImpl implements IOdontologoService {
     public void eliminarOdontologo(Long id) {
         Optional<Odontologo> busqueda = odontologoRepository.findById(id);
         if(busqueda.isPresent()){
-            logger.info("Eliminando el odontologo con id: " + id);
+            logger.debug("Eliminando el odontologo con id: " + id);
             odontologoRepository.delete(busqueda.get());
         }
     }
@@ -75,7 +75,7 @@ public class OdontologoServiceImpl implements IOdontologoService {
         for (Odontologo odontologo : odontologos){
             odontologosDTO.add(mapper.convertValue(odontologo,OdontologoDTO.class));
         }
-        logger.info("Listando todos los odontologos");
+        logger.debug("Listando todos los odontologos");
         return odontologosDTO;
     }
 }

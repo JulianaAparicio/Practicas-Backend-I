@@ -29,14 +29,14 @@ public class PacienteServiceImpl implements IPacienteService {
     @Override
     public void crearPaciente(PacienteDTO pacienteDTO) {
         if (pacienteDTO != null){
-            logger.info("Creando paciente...");
+            logger.debug("Creando paciente...");
             guardarPaciente(pacienteDTO);
         }
     }
 
     @Override
     public PacienteDTO buscarPacientePorId(Long id) {
-        logger.info("Buscando paciente con id: " + id);
+        logger.debug("Buscando paciente con id: " + id);
         Optional<Paciente> paciente = pacienteRepository.findById(id);
         PacienteDTO pacienteDTO = null;
         if(paciente.isPresent()){
@@ -46,7 +46,7 @@ public class PacienteServiceImpl implements IPacienteService {
     }
 
     private void guardarPaciente(PacienteDTO pacienteDTO){
-        logger.info("Guardando paciente");
+        logger.debug("Guardando paciente");
         Paciente paciente = mapper.convertValue(pacienteDTO,Paciente.class);
         pacienteRepository.save(paciente);
     }
@@ -54,7 +54,7 @@ public class PacienteServiceImpl implements IPacienteService {
     @Override
     public void modificarPaciente(PacienteDTO pacienteDTO) {
         if (pacienteDTO != null){
-            logger.info("Modificando paciente");
+            logger.debug("Modificando paciente");
             guardarPaciente(pacienteDTO);
         }
     }
@@ -64,7 +64,7 @@ public class PacienteServiceImpl implements IPacienteService {
         if (pacienteRepository.findById(id).isEmpty()){
             throw new ResourceNotFoundException("No existe un paciente con id: " + id);
         }
-        logger.info("Eliminando el paciente con id: " + id);
+        logger.debug("Eliminando el paciente con id: " + id);
         pacienteRepository.delete(pacienteRepository.findById(id).get());
     }
 
@@ -76,7 +76,7 @@ public class PacienteServiceImpl implements IPacienteService {
         for (Paciente paciente : pacientes){
             pacientesDTO.add(mapper.convertValue(paciente,PacienteDTO.class));
         }
-        logger.info("Listando todos los pacientes");
+        logger.debug("Listando todos los pacientes");
         return pacientesDTO;
     }
 
@@ -84,7 +84,7 @@ public class PacienteServiceImpl implements IPacienteService {
     public PacienteDTO buscarPacientePorEmail(String email) {
         Paciente paciente = pacienteRepository.buscarPacientePorEmail(email);
         PacienteDTO pacienteDTO = null;
-        logger.info("Buscando paciente con email: " + email);
+        logger.debug("Buscando paciente con email: " + email);
         if(paciente != null){
             pacienteDTO = mapper.convertValue(paciente,PacienteDTO.class);
         }
