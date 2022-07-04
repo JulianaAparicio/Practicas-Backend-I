@@ -1,5 +1,6 @@
 package com.dh.clinicaOdontologica.service.impl;
 
+import com.dh.clinicaOdontologica.exceptions.BadRequestException;
 import com.dh.clinicaOdontologica.model.Turno;
 import com.dh.clinicaOdontologica.dto.TurnoDTO;
 import com.dh.clinicaOdontologica.repository.ITurnoRepository;
@@ -26,8 +27,10 @@ public class TurnoServiceImpl implements ITurnoService {
     ObjectMapper mapper;
 
     @Override
-    public void crearTurno(TurnoDTO turnoDTO) {
-        if (turnoDTO != null){
+    public void crearTurno(TurnoDTO turnoDTO) throws BadRequestException {
+        if (turnoDTO.getPaciente().getId() != null || turnoDTO.getOdontologo().getId() != null){
+            throw new BadRequestException("El turno que está intentando crear no posse un paciente u odontólogo.");
+        } else {
             logger.info("Creando turno...");
             guardarTurno(turnoDTO);
         }

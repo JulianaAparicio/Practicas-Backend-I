@@ -1,6 +1,7 @@
 package com.dh.clinicaOdontologica.controller;
 
 import com.dh.clinicaOdontologica.dto.TurnoDTO;
+import com.dh.clinicaOdontologica.exceptions.BadRequestException;
 import com.dh.clinicaOdontologica.service.ITurnoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -16,9 +17,9 @@ public class TurnoController {
     private ITurnoService turnoService;
 
     @PostMapping
-    public ResponseEntity<?> crearTurno(@RequestBody TurnoDTO turnoDTO){
+    public ResponseEntity<?> crearTurno(@RequestBody TurnoDTO turnoDTO) throws BadRequestException {
         turnoService.crearTurno(turnoDTO);
-        return ResponseEntity.ok(HttpStatus.OK);
+        return ResponseEntity.ok("creado");
     }
 
     @GetMapping("/{id}")
