@@ -50,7 +50,7 @@ public class PacienteController {
         return pacienteService.buscarPacientePorEmail(email);
     }
 
-    @ExceptionHandler(ResourceNotFoundException.class)
+    @ExceptionHandler({ResourceNotFoundException.class})
     public ResponseEntity<String> procesarErrorNotFound(ResourceNotFoundException ex){
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(ex.getMessage());
     }
