@@ -32,3 +32,18 @@
 [2022-07-0519:06:16] [ DEBUG] [PacienteServiceImpl:49] Guardando paciente
 [2022-07-0519:06:51] [ DEBUG] [PacienteServiceImpl:39] Buscando paciente con id: 1
 [2022-07-0519:07:13] [ DEBUG] [PacienteServiceImpl:87] Buscando paciente con email: pia_aparicio@digital.com
+[2022-07-0519:27:32] [ DEBUG] [PacienteServiceImpl:32] Creando paciente...
+[2022-07-0519:27:32] [ DEBUG] [PacienteServiceImpl:49] Guardando paciente
+[2022-07-0519:27:41] [ ERROR] [GlobalExceptionHandler:16] No serializer found for class org.hibernate.proxy.pojo.bytebuddy.ByteBuddyInterceptor and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS) (through reference chain: com.dh.clinicaOdontologica.model.Paciente["domicilio"]->com.dh.clinicaOdontologica.model.Domicilio$HibernateProxy$0jMgDNh3["hibernateLazyInitializer"])
+[2022-07-0519:28:07] [ ERROR] [GlobalExceptionHandler:16] No serializer found for class org.hibernate.proxy.pojo.bytebuddy.ByteBuddyInterceptor and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS) (through reference chain: com.dh.clinicaOdontologica.model.Paciente["domicilio"]->com.dh.clinicaOdontologica.model.Domicilio$HibernateProxy$0jMgDNh3["hibernateLazyInitializer"])
+[2022-07-0519:32:43] [ DEBUG] [PacienteServiceImpl:32] Creando paciente...
+[2022-07-0519:32:43] [ DEBUG] [PacienteServiceImpl:49] Guardando paciente
+[2022-07-0519:32:48] [ DEBUG] [PacienteServiceImpl:87] Buscando paciente con email: pia_aparicio@digital.com
+[2022-07-0519:53:33] [ DEBUG] [PacienteServiceImpl:32] Creando paciente...
+[2022-07-0519:53:33] [ DEBUG] [PacienteServiceImpl:49] Guardando paciente
+[2022-07-0519:53:53] [ DEBUG] [PacienteServiceImpl:39] Buscando paciente con id: 1
+[2022-07-0519:53:53] [ ERROR] [GlobalExceptionHandler:16] No serializer found for class org.hibernate.proxy.pojo.bytebuddy.ByteBuddyInterceptor and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS) (through reference chain: com.dh.clinicaOdontologica.model.Paciente["domicilio"]->com.dh.clinicaOdontologica.model.Domicilio$HibernateProxy$TYsRsTlK["hibernateLazyInitializer"])
+[2022-07-0519:57:32] [ DEBUG] [PacienteServiceImpl:32] Creando paciente...
+[2022-07-0519:57:32] [ DEBUG] [PacienteServiceImpl:49] Guardando paciente
+[2022-07-0519:57:35] [ DEBUG] [PacienteServiceImpl:39] Buscando paciente con id: 1
+[2022-07-0519:58:53] [ DEBUG] [PacienteServiceImpl:87] Buscando paciente con email: pia_aparicio@digital.com
