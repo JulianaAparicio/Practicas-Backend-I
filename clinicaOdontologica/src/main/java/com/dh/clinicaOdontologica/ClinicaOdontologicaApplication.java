@@ -9,7 +9,7 @@ public class ClinicaOdontologicaApplication {
 
 	public static void main(String[] args) {
 
-		PropertyConfigurator.configure("log4j.properties");
+		PropertyConfigurator.configure("src/main/resources/log4j.properties");
 		SpringApplication.run(ClinicaOdontologicaApplication.class, args);
 	}
 

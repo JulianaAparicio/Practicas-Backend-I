@@ -8,3 +8,27 @@
 [2022-07-0421:07:01] [ DEBUG] [PacienteServiceImpl:39] Buscando paciente con id: 1
 [2022-07-0421:07:01] [ DEBUG] [PacienteServiceImpl:67] Eliminando el paciente con id: 1
 [2022-07-0421:07:01] [ DEBUG] [PacienteServiceImpl:39] Buscando paciente con id: 1
+[2022-07-0422:01:52] [ DEBUG] [PacienteServiceImpl:32] Creando paciente...
+[2022-07-0422:01:52] [ DEBUG] [PacienteServiceImpl:49] Guardando paciente
+[2022-07-0422:01:52] [ DEBUG] [PacienteServiceImpl:39] Buscando paciente con id: 1
+[2022-07-0422:01:52] [ DEBUG] [PacienteServiceImpl:79] Listando todos los pacientes
+[2022-07-0422:01:52] [ DEBUG] [PacienteServiceImpl:67] Eliminando el paciente con id: 1
+[2022-07-0422:01:52] [ DEBUG] [PacienteServiceImpl:39] Buscando paciente con id: 1
+[2022-07-0422:05:19] [ DEBUG] [PacienteServiceImpl:32] Creando paciente...
+[2022-07-0422:05:19] [ DEBUG] [PacienteServiceImpl:49] Guardando paciente
+[2022-07-0422:05:19] [ DEBUG] [PacienteServiceImpl:39] Buscando paciente con id: 1
+[2022-07-0422:05:19] [ DEBUG] [PacienteServiceImpl:79] Listando todos los pacientes
+[2022-07-0422:05:19] [ DEBUG] [PacienteServiceImpl:67] Eliminando el paciente con id: 1
+[2022-07-0422:05:19] [ DEBUG] [PacienteServiceImpl:39] Buscando paciente con id: 1
+[2022-07-0422:05:19] [ DEBUG] [PacienteServiceImpl:57] Modificando paciente
+[2022-07-0422:05:19] [ DEBUG] [PacienteServiceImpl:49] Guardando paciente
+[2022-07-0422:21:20] [ DEBUG] [PacienteServiceImpl:57] Modificando paciente
+[2022-07-0422:21:20] [ DEBUG] [PacienteServiceImpl:49] Guardando paciente
+[2022-07-0422:21:58] [ DEBUG] [PacienteServiceImpl:32] Creando paciente...
+[2022-07-0422:21:58] [ DEBUG] [PacienteServiceImpl:49] Guardando paciente
+[2022-07-0422:21:58] [ DEBUG] [PacienteServiceImpl:39] Buscando paciente con id: 1
+[2022-07-0518:37:51] [ DEBUG] [PacienteServiceImpl:79] Listando todos los pacientes
+[2022-07-0519:06:16] [ DEBUG] [PacienteServiceImpl:32] Creando paciente...
+[2022-07-0519:06:16] [ DEBUG] [PacienteServiceImpl:49] Guardando paciente
+[2022-07-0519:06:51] [ DEBUG] [PacienteServiceImpl:39] Buscando paciente con id: 1
+[2022-07-0519:07:13] [ DEBUG] [PacienteServiceImpl:87] Buscando paciente con email: pia_aparicio@digital.com
