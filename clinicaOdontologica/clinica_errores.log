@@ -1,0 +1,10 @@
+[2022-07-0420:59:37] [ DEBUG] [PacienteServiceImpl:32] Creando paciente...
+[2022-07-0420:59:37] [ DEBUG] [PacienteServiceImpl:49] Guardando paciente
+[2022-07-0420:59:38] [ DEBUG] [PacienteServiceImpl:39] Buscando paciente con id: 1
+[2022-07-0421:00:37] [ DEBUG] [PacienteServiceImpl:57] Modificando paciente
+[2022-07-0421:00:37] [ DEBUG] [PacienteServiceImpl:49] Guardando paciente
+[2022-07-0421:07:01] [ DEBUG] [PacienteServiceImpl:32] Creando paciente...
+[2022-07-0421:07:01] [ DEBUG] [PacienteServiceImpl:49] Guardando paciente
+[2022-07-0421:07:01] [ DEBUG] [PacienteServiceImpl:39] Buscando paciente con id: 1
+[2022-07-0421:07:01] [ DEBUG] [PacienteServiceImpl:67] Eliminando el paciente con id: 1
+[2022-07-0421:07:01] [ DEBUG] [PacienteServiceImpl:39] Buscando paciente con id: 1
