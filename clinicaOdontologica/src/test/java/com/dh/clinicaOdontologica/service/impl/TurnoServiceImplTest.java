@@ -1,5 +1,6 @@
 package com.dh.clinicaOdontologica.service.impl;
 
+import com.dh.clinicaOdontologica.exceptions.BadRequestException;
 import com.dh.clinicaOdontologica.model.Odontologo;
 import com.dh.clinicaOdontologica.model.Paciente;
 import com.dh.clinicaOdontologica.dto.OdontologoDTO;
@@ -28,7 +29,7 @@ class TurnoServiceImplTest {
     ObjectMapper mapper;
 
     @Test
-    public void deberiaCrearUnTurno(){
+    public void deberiaCrearUnTurno() throws BadRequestException {
 
         // Dado:
         OdontologoDTO odontologoDTO = new OdontologoDTO();

@@ -1,7 +1,9 @@
 package com.dh.clinicaOdontologica.service.impl;
 
 import com.dh.clinicaOdontologica.dto.PacienteDTO;
+import com.dh.clinicaOdontologica.exceptions.ResourceNotFoundException;
 import com.dh.clinicaOdontologica.service.IPacienteService;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
@@ -34,8 +36,11 @@ class PacienteServiceImplTest {
         assertNotNull(pacienteTest);
     }
 
-    @Test
+    /*@Test
     public void deberiaModificarUnPaciente(){
+
+        // Ver cómo se hace el test de modificar:
+
         // Dado
         PacienteDTO pacienteDTO1 = new PacienteDTO();
         pacienteDTO1.setApellido("Apellido Paciente Test 1");
@@ -49,6 +54,17 @@ class PacienteServiceImplTest {
         pacienteService.modificarPaciente(pacienteDTO2);
         // Entonces
         assertEquals(pacienteDTO2,pacienteDTO1);
+    }*/
+
+    @Test
+    public void deberiaEliminarUnPaciente() throws ResourceNotFoundException {
+        // Dado
+
+        // Cuando
+        pacienteService.eliminarPaciente(1L);
+
+        // Entonces
+        Assert.assertNull(pacienteService.buscarPacientePorId(1L));
     }
 
 
