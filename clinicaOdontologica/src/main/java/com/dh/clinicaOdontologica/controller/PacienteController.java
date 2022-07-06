@@ -42,7 +42,7 @@ public class PacienteController {
     @DeleteMapping("/{id}")
     public ResponseEntity<?> eliminarPaciente(@PathVariable Long id) throws ResourceNotFoundException {
         pacienteService.eliminarPaciente(id);
-        return ResponseEntity.ok("Eliminado"); // agregar en todos
+        return ResponseEntity.ok("Eliminado");
     }
 
     @GetMapping("/buscarPorEmail/{email}")

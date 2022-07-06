@@ -1,6 +1,7 @@
 package com.dh.clinicaOdontologica.service.impl;
 
 import com.dh.clinicaOdontologica.exceptions.BadRequestException;
+import com.dh.clinicaOdontologica.exceptions.ResourceNotFoundException;
 import com.dh.clinicaOdontologica.model.Turno;
 import com.dh.clinicaOdontologica.dto.TurnoDTO;
 import com.dh.clinicaOdontologica.repository.ITurnoRepository;
@@ -62,11 +63,13 @@ public class TurnoServiceImpl implements ITurnoService {
     }
 
     @Override
-    public void eliminarTurno(Long id) {
+    public void eliminarTurno(Long id) throws ResourceNotFoundException {
         Optional<Turno> busqueda = turnoRepository.findById(id);
         if(busqueda.isPresent()){
             logger.debug("Eliminando el turno con id: " + id);
             turnoRepository.delete(busqueda.get());
+        } else {
+            throw new ResourceNotFoundException("El id N° " + id + " no existe.");
         }
     }
 

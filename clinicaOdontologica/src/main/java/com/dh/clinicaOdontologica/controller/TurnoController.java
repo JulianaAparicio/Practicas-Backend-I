@@ -2,6 +2,7 @@ package com.dh.clinicaOdontologica.controller;
 
 import com.dh.clinicaOdontologica.dto.TurnoDTO;
 import com.dh.clinicaOdontologica.exceptions.BadRequestException;
+import com.dh.clinicaOdontologica.exceptions.ResourceNotFoundException;
 import com.dh.clinicaOdontologica.service.ITurnoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -39,7 +40,7 @@ public class TurnoController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<?> eliminarTurno(@PathVariable Long id){
+    public ResponseEntity<?> eliminarTurno(@PathVariable Long id) throws ResourceNotFoundException {
         turnoService.eliminarTurno(id);
         return ResponseEntity.ok("Eliminado");
     }
