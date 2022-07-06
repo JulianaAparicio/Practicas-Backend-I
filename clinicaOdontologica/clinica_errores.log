@@ -47,3 +47,30 @@
 [2022-07-0519:57:32] [ DEBUG] [PacienteServiceImpl:49] Guardando paciente
 [2022-07-0519:57:35] [ DEBUG] [PacienteServiceImpl:39] Buscando paciente con id: 1
 [2022-07-0519:58:53] [ DEBUG] [PacienteServiceImpl:87] Buscando paciente con email: pia_aparicio@digital.com
+[2022-07-0521:35:59] [ DEBUG] [PacienteServiceImpl:32] Creando paciente...
+[2022-07-0521:35:59] [ DEBUG] [PacienteServiceImpl:49] Guardando paciente
+[2022-07-0521:36:03] [ DEBUG] [PacienteServiceImpl:39] Buscando paciente con id: 1
+[2022-07-0521:36:12] [ DEBUG] [PacienteServiceImpl:87] Buscando paciente con email: pia_aparicio@digital.com
+[2022-07-0521:37:17] [ DEBUG] [PacienteServiceImpl:57] Modificando paciente
+[2022-07-0521:37:17] [ DEBUG] [PacienteServiceImpl:49] Guardando paciente
+[2022-07-0521:37:23] [ DEBUG] [PacienteServiceImpl:39] Buscando paciente con id: 1
+[2022-07-0521:37:37] [ DEBUG] [PacienteServiceImpl:57] Modificando paciente
+[2022-07-0521:37:37] [ DEBUG] [PacienteServiceImpl:49] Guardando paciente
+[2022-07-0521:37:41] [ DEBUG] [PacienteServiceImpl:39] Buscando paciente con id: 1
+[2022-07-0521:38:02] [ DEBUG] [PacienteServiceImpl:39] Buscando paciente con id: 1
+[2022-07-0521:38:16] [ DEBUG] [PacienteServiceImpl:79] Listando todos los pacientes
+[2022-07-0521:38:48] [ ERROR] [GlobalExceptionHandler:16] query did not return a unique result: 2; nested exception is javax.persistence.NonUniqueResultException: query did not return a unique result: 2
+[2022-07-0521:39:08] [ DEBUG] [PacienteServiceImpl:79] Listando todos los pacientes
+[2022-07-0521:39:39] [ DEBUG] [PacienteServiceImpl:67] Eliminando el paciente con id: 2
+[2022-07-0521:39:46] [ DEBUG] [PacienteServiceImpl:79] Listando todos los pacientes
+[2022-07-0521:40:09] [ DEBUG] [PacienteServiceImpl:39] Buscando paciente con id: 3
+[2022-07-0521:41:09] [ DEBUG] [OdontologoServiceImpl:32] Creando odontologo...
+[2022-07-0521:41:09] [ DEBUG] [OdontologoServiceImpl:49] Guardando odontologo
+[2022-07-0521:41:34] [ DEBUG] [OdontologoServiceImpl:39] Buscando odontologo con id: 1
+[2022-07-0521:42:26] [ DEBUG] [OdontologoServiceImpl:57] Modificando odontologo
+[2022-07-0521:42:26] [ DEBUG] [OdontologoServiceImpl:49] Guardando odontologo
+[2022-07-0521:42:33] [ DEBUG] [OdontologoServiceImpl:39] Buscando odontologo con id: 1
+[2022-07-0521:42:46] [ DEBUG] [OdontologoServiceImpl:81] Listando todos los odontologos
+[2022-07-0521:49:28] [ DEBUG] [TurnoServiceImpl:34] Creando turno...
+[2022-07-0521:49:28] [ DEBUG] [TurnoServiceImpl:51] Guardando turno
+[2022-07-0521:49:28] [ ERROR] [GlobalExceptionHandler:16] org.hibernate.TransientPropertyValueException: Not-null property references a transient value - transient instance must be saved before current operation : com.dh.clinicaOdontologica.model.Turno.paciente -> com.dh.clinicaOdontologica.model.Paciente; nested exception is java.lang.IllegalStateException: org.hibernate.TransientPropertyValueException: Not-null property references a transient value - transient instance must be saved before current operation : com.dh.clinicaOdontologica.model.Turno.paciente -> com.dh.clinicaOdontologica.model.Paciente

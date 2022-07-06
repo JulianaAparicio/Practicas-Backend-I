@@ -41,6 +41,6 @@ public class TurnoController {
     @DeleteMapping("/{id}")
     public ResponseEntity<?> eliminarTurno(@PathVariable Long id){
         turnoService.eliminarTurno(id);
-        return ResponseEntity.ok(HttpStatus.OK);
+        return ResponseEntity.ok("Eliminado");
     }
 }
