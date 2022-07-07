@@ -8,9 +8,9 @@ import java.util.Set;
 public interface IPacienteService {
 
     void crearPaciente(PacienteDTO pacienteDTO);
-    PacienteDTO buscarPacientePorId(Long id);
+    PacienteDTO buscarPacientePorId(Long id) throws ResourceNotFoundException;
     void modificarPaciente(PacienteDTO pacienteDTO);
     void eliminarPaciente(Long id)throws ResourceNotFoundException;
     Set<PacienteDTO> listarTodosLosPacientes();
-    PacienteDTO buscarPacientePorEmail(String email);
+    PacienteDTO buscarPacientePorEmail(String email) throws ResourceNotFoundException;
 }
