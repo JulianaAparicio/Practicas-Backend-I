@@ -45,6 +45,11 @@ public class OdontologoController {
         return ResponseEntity.ok("Eliminado");
     }
 
+    @GetMapping("/buscarPorMatricula/{matricula}")
+    public OdontologoDTO buscarOdontologoPorMatricula(@PathVariable String matricula) throws ResourceNotFoundException {
+        return odontologoService.buscarOdontologoPorMatricula(matricula);
+    }
+
     @GetMapping("/dispararError")
     public ResponseEntity<OdontologoDTO> lanzarError(@PathVariable Integer id) throws ServiceException {
         odontologoService.invocarMetodoConError();

@@ -85,6 +85,19 @@ public class OdontologoServiceImpl implements IOdontologoService {
         return odontologosDTO;
     }
 
+    @Override
+    public OdontologoDTO buscarOdontologoPorMatricula(String matricula) throws ResourceNotFoundException {
+        if (odontologoRepository.buscarOdontologoPorMatricula(matricula) == null){
+            throw new ResourceNotFoundException("No existe un odontólogo con matrícula: " + matricula);
+        } else {
+            logger.debug("Buscando odontologo con matrícula: " + matricula);
+            Odontologo odontologo = odontologoRepository.buscarOdontologoPorMatricula(matricula);
+            OdontologoDTO odontologoDTO;
+            odontologoDTO = mapper.convertValue(odontologo,OdontologoDTO.class);
+            return odontologoDTO;
+        }
+    }
+
     public void invocarMetodoConError() throws ServiceException {
         throw new ServiceException("Ha ocurrido un error en la capa de servicio");
     }

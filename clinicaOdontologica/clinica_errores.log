@@ -92,3 +92,17 @@
 [2022-07-0719:00:04] [ DEBUG] [PacienteServiceImpl:54] Guardando paciente
 [2022-07-0719:00:15] [ DEBUG] [PacienteServiceImpl:92] Buscando paciente con email: pia_aparicio@digital.com
 [2022-07-0719:00:29] [ DEBUG] [PacienteServiceImpl:92] Buscando paciente con email: pia@digital.com
+[2022-07-0720:10:54] [ DEBUG] [OdontologoServiceImpl:33] Creando odontologo...
+[2022-07-0720:10:54] [ DEBUG] [OdontologoServiceImpl:52] Guardando odontologo
+[2022-07-0720:11:59] [ ERROR] [GlobalExceptionHandler:16] Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "HGA571"
+[2022-07-0720:18:51] [ DEBUG] [OdontologoServiceImpl:33] Creando odontologo...
+[2022-07-0720:18:51] [ DEBUG] [OdontologoServiceImpl:52] Guardando odontologo
+[2022-07-0720:19:03] [ DEBUG] [OdontologoServiceImpl:40] Buscando odontologo con id: 1
+[2022-07-0720:19:12] [ ERROR] [GlobalExceptionHandler:22] No existe un odontólogo con matrícula: HGA571
+[2022-07-0720:21:19] [ DEBUG] [OdontologoServiceImpl:33] Creando odontologo...
+[2022-07-0720:21:19] [ DEBUG] [OdontologoServiceImpl:52] Guardando odontologo
+[2022-07-0720:21:23] [ DEBUG] [OdontologoServiceImpl:93] Buscando odontologo con matrícula: HGA571
+[2022-07-0720:21:27] [ DEBUG] [OdontologoServiceImpl:40] Buscando odontologo con id: 1
+[2022-07-0720:21:41] [ DEBUG] [OdontologoServiceImpl:60] Modificando odontologo
+[2022-07-0720:21:41] [ DEBUG] [OdontologoServiceImpl:52] Guardando odontologo
+[2022-07-0720:21:46] [ DEBUG] [OdontologoServiceImpl:84] Listando todos los odontologos

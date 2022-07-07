@@ -11,5 +11,6 @@ public interface IOdontologoService {
     void modificarOdontologo(OdontologoDTO odontologoDTO);
     void eliminarOdontologo(Long id) throws ResourceNotFoundException;
     Set<OdontologoDTO> listarTodosLosOdontologos();
+    OdontologoDTO buscarOdontologoPorMatricula(String matricula) throws ResourceNotFoundException;
     void invocarMetodoConError();
 }
