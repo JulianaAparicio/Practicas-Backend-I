@@ -23,7 +23,7 @@ public class OdontologoController {
     }
 
     @GetMapping("/{id}")
-    public OdontologoDTO buscarOdontologoPorId(@PathVariable Long id){
+    public OdontologoDTO buscarOdontologoPorId(@PathVariable Long id) throws ResourceNotFoundException{
         return odontologoService.buscarOdontologoPorId(id);
     }
 

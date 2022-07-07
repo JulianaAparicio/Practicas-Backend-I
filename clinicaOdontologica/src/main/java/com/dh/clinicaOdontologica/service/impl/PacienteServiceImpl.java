@@ -34,9 +34,6 @@ public class PacienteServiceImpl implements IPacienteService {
         }
     }
 
-
-    // Corregí cosas ver si sigue funcionando:
-
     @Override
     public PacienteDTO buscarPacientePorId(Long id) throws ResourceNotFoundException {
         logger.debug("Buscando paciente con id: " + id);
@@ -87,14 +84,6 @@ public class PacienteServiceImpl implements IPacienteService {
 
     @Override
     public PacienteDTO buscarPacientePorEmail(String email) throws ResourceNotFoundException {
-        /*Paciente paciente = pacienteRepository.buscarPacientePorEmail(email);
-        PacienteDTO pacienteDTO = null;*/
-        logger.debug("Buscando paciente con email: " + email);
-        /*if(paciente != null){
-            pacienteDTO = mapper.convertValue(paciente,PacienteDTO.class);
-        }
-        return pacienteDTO;*/
-
         if (pacienteRepository.buscarPacientePorEmail(email) == null){
             throw new ResourceNotFoundException("No existe un paciente con email: " + email);
         } else {

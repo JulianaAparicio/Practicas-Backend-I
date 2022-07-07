@@ -35,14 +35,16 @@ public class OdontologoServiceImpl implements IOdontologoService {
     }
 
     @Override
-    public OdontologoDTO buscarOdontologoPorId(Long id) {
+    public OdontologoDTO buscarOdontologoPorId(Long id) throws ResourceNotFoundException {
         logger.debug("Buscando odontologo con id: " + id);
-        Optional<Odontologo> odontologo = odontologoRepository.findById(id);
-        OdontologoDTO odontologoDTO = null;
-        if(odontologo.isPresent()){
+        if (odontologoRepository.findById(id).isEmpty()){
+            throw new ResourceNotFoundException("No existe un odontólogo con id: " + id);
+        } else {
+            Optional<Odontologo> odontologo = odontologoRepository.findById(id);
+            OdontologoDTO odontologoDTO;
             odontologoDTO = mapper.convertValue(odontologo,OdontologoDTO.class);
+            return odontologoDTO;
         }
-        return odontologoDTO;
     }
 
     private void guardarOdontologo(OdontologoDTO odontologoDTO){
