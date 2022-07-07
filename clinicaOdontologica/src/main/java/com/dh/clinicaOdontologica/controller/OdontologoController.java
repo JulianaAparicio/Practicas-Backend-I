@@ -1,6 +1,7 @@
 package com.dh.clinicaOdontologica.controller;
 
 import com.dh.clinicaOdontologica.dto.OdontologoDTO;
+import com.dh.clinicaOdontologica.exceptions.BadRequestException;
 import com.dh.clinicaOdontologica.exceptions.ResourceNotFoundException;
 import com.dh.clinicaOdontologica.service.IOdontologoService;
 import org.hibernate.service.spi.ServiceException;
@@ -18,7 +19,7 @@ public class OdontologoController {
     private IOdontologoService odontologoService;
 
     @PostMapping
-    public ResponseEntity<?> crearOdontologo(@RequestBody OdontologoDTO odontologoDTO){
+    public ResponseEntity<?> crearOdontologo(@RequestBody OdontologoDTO odontologoDTO) throws BadRequestException  {
         odontologoService.crearOdontologo(odontologoDTO);
         return ResponseEntity.ok(HttpStatus.OK);
     }

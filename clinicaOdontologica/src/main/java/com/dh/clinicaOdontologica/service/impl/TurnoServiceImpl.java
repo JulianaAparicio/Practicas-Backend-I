@@ -30,8 +30,8 @@ public class TurnoServiceImpl implements ITurnoService {
 
     @Override
     public void crearTurno(TurnoDTO turnoDTO) throws BadRequestException {
-        if (turnoDTO.getPaciente().getId() != null || turnoDTO.getOdontologo().getId() != null){
-            throw new BadRequestException("El turno que está intentando crear no posse un paciente u odontólogo.");
+        if (turnoDTO.getPaciente().getId() == null || turnoDTO.getOdontologo().getId() == null){
+            throw new BadRequestException("El turno que está intentando crear no posee un paciente u odontólogo.");
         } else {
             logger.debug("Creando turno...");
             guardarTurno(turnoDTO);

@@ -21,7 +21,7 @@ public class TurnoController {
     @PostMapping
     public ResponseEntity<?> crearTurno(@RequestBody TurnoDTO turnoDTO) throws BadRequestException {
         turnoService.crearTurno(turnoDTO);
-        return ResponseEntity.ok("creado");
+        return ResponseEntity.ok(HttpStatus.OK);
     }
 
     @GetMapping("/{id}")

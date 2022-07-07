@@ -1,5 +1,6 @@
 package com.dh.clinicaOdontologica.service.impl;
 
+import com.dh.clinicaOdontologica.exceptions.BadRequestException;
 import com.dh.clinicaOdontologica.exceptions.ResourceNotFoundException;
 import com.dh.clinicaOdontologica.model.Paciente;
 import com.dh.clinicaOdontologica.dto.PacienteDTO;
@@ -28,8 +29,10 @@ public class PacienteServiceImpl implements IPacienteService {
     private final Logger logger = Logger.getLogger(PacienteServiceImpl.class);
 
     @Override
-    public void crearPaciente(PacienteDTO pacienteDTO) {
-        if (pacienteDTO != null){
+    public void crearPaciente(PacienteDTO pacienteDTO) throws BadRequestException {
+        if (pacienteDTO == null){
+            throw new BadRequestException("El paciente que está intentando crear está vacío.");
+        } else {
             logger.debug("Creando paciente...");
             guardarPaciente(pacienteDTO);
         }

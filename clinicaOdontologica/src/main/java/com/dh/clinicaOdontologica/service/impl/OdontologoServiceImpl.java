@@ -1,5 +1,6 @@
 package com.dh.clinicaOdontologica.service.impl;
 
+import com.dh.clinicaOdontologica.exceptions.BadRequestException;
 import com.dh.clinicaOdontologica.exceptions.ResourceNotFoundException;
 import com.dh.clinicaOdontologica.model.Odontologo;
 import com.dh.clinicaOdontologica.dto.OdontologoDTO;
@@ -28,9 +29,11 @@ public class OdontologoServiceImpl implements IOdontologoService {
     private final Logger logger = Logger.getLogger(OdontologoServiceImpl.class);
 
     @Override
-    public void crearOdontologo(OdontologoDTO odontologoDTO) {
-        if (odontologoDTO != null) {
-            logger.debug("Creando odontologo...");
+    public void crearOdontologo(OdontologoDTO odontologoDTO) throws BadRequestException {
+        if (odontologoDTO == null){
+            throw new BadRequestException("El odontólogo que está intentando crear está vacío.");
+        } else {
+            logger.debug("Creando odontólogo...");
             guardarOdontologo(odontologoDTO);
         }
     }
