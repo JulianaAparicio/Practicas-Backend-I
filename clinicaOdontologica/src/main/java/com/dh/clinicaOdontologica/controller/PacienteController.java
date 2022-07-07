@@ -3,6 +3,7 @@ package com.dh.clinicaOdontologica.controller;
 import com.dh.clinicaOdontologica.dto.PacienteDTO;
 import com.dh.clinicaOdontologica.exceptions.ResourceNotFoundException;
 import com.dh.clinicaOdontologica.service.IPacienteService;
+import org.hibernate.service.spi.ServiceException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -53,6 +54,11 @@ public class PacienteController {
     @ExceptionHandler({ResourceNotFoundException.class})
     public ResponseEntity<String> procesarErrorNotFound(ResourceNotFoundException ex){
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(ex.getMessage());
+    }
+
+    @ExceptionHandler({ ServiceException.class})
+    public ResponseEntity<String> handleException(ServiceException ex) {
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ex.getMessage());
     }
 
 

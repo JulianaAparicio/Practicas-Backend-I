@@ -12,4 +12,7 @@ public interface ITurnoService {
     void modificarTurno(TurnoDTO turnoDTO);
     void eliminarTurno(Long id) throws ResourceNotFoundException;
     Set<TurnoDTO> listarTodosLosTurnos();
+
+    void invocarMetodoConError();
+
 }

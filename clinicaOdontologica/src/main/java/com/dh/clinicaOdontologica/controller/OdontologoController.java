@@ -3,6 +3,7 @@ package com.dh.clinicaOdontologica.controller;
 import com.dh.clinicaOdontologica.dto.OdontologoDTO;
 import com.dh.clinicaOdontologica.exceptions.ResourceNotFoundException;
 import com.dh.clinicaOdontologica.service.IOdontologoService;
+import org.hibernate.service.spi.ServiceException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -42,6 +43,18 @@ public class OdontologoController {
     public ResponseEntity<?> eliminarOdontologo(@PathVariable Long id) throws ResourceNotFoundException {
         odontologoService.eliminarOdontologo(id);
         return ResponseEntity.ok("Eliminado");
+    }
+
+    @GetMapping("/dispararError")
+    public ResponseEntity<OdontologoDTO> lanzarError(@PathVariable Integer id) throws ServiceException {
+        odontologoService.invocarMetodoConError();
+
+        return ResponseEntity.ok(null);
+    }
+
+    @ExceptionHandler({ ServiceException.class})
+    public ResponseEntity<String> handleException(ServiceException ex) {
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ex.getMessage());
     }
 
 

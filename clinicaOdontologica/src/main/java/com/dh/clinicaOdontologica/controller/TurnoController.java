@@ -4,6 +4,7 @@ import com.dh.clinicaOdontologica.dto.TurnoDTO;
 import com.dh.clinicaOdontologica.exceptions.BadRequestException;
 import com.dh.clinicaOdontologica.exceptions.ResourceNotFoundException;
 import com.dh.clinicaOdontologica.service.ITurnoService;
+import org.hibernate.service.spi.ServiceException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -44,4 +45,11 @@ public class TurnoController {
         turnoService.eliminarTurno(id);
         return ResponseEntity.ok("Eliminado");
     }
+
+    @ExceptionHandler({ ServiceException.class})
+    public ResponseEntity<String> handleException(ServiceException ex) {
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ex.getMessage());
+    }
+
+
 }

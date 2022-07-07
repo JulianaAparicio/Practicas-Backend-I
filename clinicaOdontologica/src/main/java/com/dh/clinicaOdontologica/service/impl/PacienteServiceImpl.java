@@ -7,6 +7,7 @@ import com.dh.clinicaOdontologica.repository.IPacienteRepository;
 import com.dh.clinicaOdontologica.service.IPacienteService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.log4j.Logger;
+import org.hibernate.service.spi.ServiceException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -92,6 +93,10 @@ public class PacienteServiceImpl implements IPacienteService {
             pacienteDTO = mapper.convertValue(paciente,PacienteDTO.class);
             return pacienteDTO;
         }
+    }
+
+    public void invocarMetodoConError() throws ServiceException {
+        throw new ServiceException("Ha ocurrido un error en la capa de servicio");
     }
 
 
