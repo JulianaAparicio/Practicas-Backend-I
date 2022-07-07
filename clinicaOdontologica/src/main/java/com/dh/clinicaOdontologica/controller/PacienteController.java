@@ -24,7 +24,7 @@ public class PacienteController {
     }
 
     @GetMapping("/{id}")
-    public PacienteDTO buscarPacientePorId(@PathVariable Long id){
+    public PacienteDTO buscarPacientePorId(@PathVariable Long id) throws ResourceNotFoundException {
         return pacienteService.buscarPacientePorId(id);
     }
 
@@ -46,7 +46,7 @@ public class PacienteController {
     }
 
     @GetMapping("/buscarPorEmail/{email}")
-    public PacienteDTO buscarPacientePorEmail(@PathVariable String email){
+    public PacienteDTO buscarPacientePorEmail(@PathVariable String email) throws ResourceNotFoundException {
         return pacienteService.buscarPacientePorEmail(email);
     }
 

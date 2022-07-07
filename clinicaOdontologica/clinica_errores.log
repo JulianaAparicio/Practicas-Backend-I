@@ -74,3 +74,21 @@
 [2022-07-0521:49:28] [ DEBUG] [TurnoServiceImpl:34] Creando turno...
 [2022-07-0521:49:28] [ DEBUG] [TurnoServiceImpl:51] Guardando turno
 [2022-07-0521:49:28] [ ERROR] [GlobalExceptionHandler:16] org.hibernate.TransientPropertyValueException: Not-null property references a transient value - transient instance must be saved before current operation : com.dh.clinicaOdontologica.model.Turno.paciente -> com.dh.clinicaOdontologica.model.Paciente; nested exception is java.lang.IllegalStateException: org.hibernate.TransientPropertyValueException: Not-null property references a transient value - transient instance must be saved before current operation : com.dh.clinicaOdontologica.model.Turno.paciente -> com.dh.clinicaOdontologica.model.Paciente
+[2022-07-0718:48:27] [ DEBUG] [PacienteServiceImpl:32] Creando paciente...
+[2022-07-0718:48:27] [ DEBUG] [PacienteServiceImpl:54] Guardando paciente
+[2022-07-0718:48:40] [ DEBUG] [PacienteServiceImpl:42] Buscando paciente con id: 1
+[2022-07-0718:48:55] [ DEBUG] [PacienteServiceImpl:92] Buscando paciente con email: pia_aparicio@digital.com
+[2022-07-0718:49:37] [ ERROR] [GlobalExceptionHandler:16] Request method 'PATCH' not supported
+[2022-07-0718:49:44] [ DEBUG] [PacienteServiceImpl:62] Modificando paciente
+[2022-07-0718:49:44] [ DEBUG] [PacienteServiceImpl:54] Guardando paciente
+[2022-07-0718:49:57] [ DEBUG] [PacienteServiceImpl:42] Buscando paciente con id: 1
+[2022-07-0718:50:07] [ DEBUG] [PacienteServiceImpl:84] Listando todos los pacientes
+[2022-07-0718:50:27] [ DEBUG] [PacienteServiceImpl:72] Eliminando el paciente con id: 2
+[2022-07-0718:50:32] [ DEBUG] [PacienteServiceImpl:42] Buscando paciente con id: 1
+[2022-07-0718:59:16] [ DEBUG] [PacienteServiceImpl:32] Creando paciente...
+[2022-07-0718:59:16] [ DEBUG] [PacienteServiceImpl:54] Guardando paciente
+[2022-07-0718:59:26] [ DEBUG] [PacienteServiceImpl:92] Buscando paciente con email: pia_aparicio@digital.com
+[2022-07-0719:00:04] [ DEBUG] [PacienteServiceImpl:32] Creando paciente...
+[2022-07-0719:00:04] [ DEBUG] [PacienteServiceImpl:54] Guardando paciente
+[2022-07-0719:00:15] [ DEBUG] [PacienteServiceImpl:92] Buscando paciente con email: pia_aparicio@digital.com
+[2022-07-0719:00:29] [ DEBUG] [PacienteServiceImpl:92] Buscando paciente con email: pia@digital.com
