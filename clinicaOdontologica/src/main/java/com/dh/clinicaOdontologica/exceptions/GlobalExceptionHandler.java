@@ -12,21 +12,24 @@ public class GlobalExceptionHandler {
     private static final Logger logger = Logger.getLogger(GlobalExceptionHandler.class);
 
     @ExceptionHandler(Exception.class)
-    public ResponseEntity<?> todosErrores(Exception ex){
+    public ResponseEntity<String> internalServerErrorException(Exception ex){
         logger.error(ex.getMessage());
-        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(ex.getMessage());
+        return new ResponseEntity<>("Error en el servidor. Por favor intente más tarde.",
+                HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
-    @ExceptionHandler({ResourceNotFoundException.class})
-    public ResponseEntity<String> procesarNotFoundError(ResourceNotFoundException ex) {
+    @ExceptionHandler(ResourceNotFoundException.class)
+    public ResponseEntity<String> notFoundException(ResourceNotFoundException ex) {
         logger.error(ex.getMessage());
-        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(ex.getMessage());
+        return new ResponseEntity<>("No se encontró el valor en la base de datos, " +
+                "por favor ingrese un valor diferente.", HttpStatus.NOT_FOUND);
     }
 
     @ExceptionHandler(BadRequestException.class)
-    public ResponseEntity<?> procesarBadRequestError(BadRequestException ex){
+    public ResponseEntity<String> badRequestException(BadRequestException ex){
         logger.error(ex.getMessage());
-        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ex.getMessage());
+        return new ResponseEntity<>("Existen campos vacíos. Por favor intente nuevamente.",
+                HttpStatus.BAD_REQUEST);
     }
 
 
