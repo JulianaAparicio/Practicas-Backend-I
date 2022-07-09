@@ -22,7 +22,7 @@ public class Odontologo {
 
     private String nombre;
 
-    @Column(name = "numero_matricula")
+    @Column(name = "numero_matricula", unique = true)
     private String matricula;
 
     @OneToMany(mappedBy = "odontologo", cascade = CascadeType.ALL)

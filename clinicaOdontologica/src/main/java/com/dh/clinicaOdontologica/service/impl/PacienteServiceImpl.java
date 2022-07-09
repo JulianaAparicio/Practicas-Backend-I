@@ -20,13 +20,16 @@ import java.util.Set;
 @Service
 public class PacienteServiceImpl implements IPacienteService {
 
-    @Autowired
-    private IPacienteRepository pacienteRepository;
+    private final IPacienteRepository pacienteRepository;
+    private final Logger logger = Logger.getLogger(PacienteServiceImpl.class);
 
     @Autowired
     ObjectMapper mapper;
 
-    private final Logger logger = Logger.getLogger(PacienteServiceImpl.class);
+    @Autowired
+    public PacienteServiceImpl(IPacienteRepository pacienteRepository) {
+        this.pacienteRepository = pacienteRepository;
+    }
 
     @Override
     public void crearPaciente(PacienteDTO pacienteDTO) throws BadRequestException {

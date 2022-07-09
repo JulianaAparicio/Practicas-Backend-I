@@ -20,13 +20,16 @@ import java.util.Set;
 @Service
 public class TurnoServiceImpl implements ITurnoService {
 
-    @Autowired
-    private ITurnoRepository turnoRepository;
-
+    private final ITurnoRepository turnoRepository;
     private final Logger logger = Logger.getLogger(TurnoServiceImpl.class);
 
     @Autowired
     ObjectMapper mapper;
+
+    @Autowired
+    public TurnoServiceImpl(ITurnoRepository turnoRepository) {
+        this.turnoRepository = turnoRepository;
+    }
 
     @Override
     public void crearTurno(TurnoDTO turnoDTO) throws BadRequestException {

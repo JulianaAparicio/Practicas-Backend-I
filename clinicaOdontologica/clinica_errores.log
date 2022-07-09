@@ -106,3 +106,28 @@
 [2022-07-0720:21:41] [ DEBUG] [OdontologoServiceImpl:60] Modificando odontologo
 [2022-07-0720:21:41] [ DEBUG] [OdontologoServiceImpl:52] Guardando odontologo
 [2022-07-0720:21:46] [ DEBUG] [OdontologoServiceImpl:84] Listando todos los odontologos
+[2022-07-0722:05:54] [ DEBUG] [OdontologoServiceImpl:90] Listando todos los odontologos
+[2022-07-0722:05:59] [ DEBUG] [OdontologoServiceImpl:41] Creando odontólogo...
+[2022-07-0722:05:59] [ DEBUG] [OdontologoServiceImpl:58] Guardando odontologo
+[2022-07-0722:06:02] [ DEBUG] [OdontologoServiceImpl:48] Buscando odontologo con id: 1
+[2022-07-0722:06:06] [ DEBUG] [OdontologoServiceImpl:90] Listando todos los odontologos
+[2022-07-0722:06:10] [ DEBUG] [OdontologoServiceImpl:99] Buscando odontologo con matrícula: HGA571
+[2022-07-0722:06:16] [ DEBUG] [OdontologoServiceImpl:66] Modificando odontologo
+[2022-07-0722:06:16] [ DEBUG] [OdontologoServiceImpl:58] Guardando odontologo
+[2022-07-0722:06:22] [ ERROR] [GlobalExceptionHandler:16] query did not return a unique result: 2; nested exception is javax.persistence.NonUniqueResultException: query did not return a unique result: 2
+[2022-07-0722:06:39] [ DEBUG] [OdontologoServiceImpl:48] Buscando odontologo con id: 1
+[2022-07-0722:06:47] [ DEBUG] [OdontologoServiceImpl:90] Listando todos los odontologos
+[2022-07-0722:06:52] [ DEBUG] [OdontologoServiceImpl:75] Eliminando el odontologo con id: 1
+[2022-07-0722:06:56] [ DEBUG] [OdontologoServiceImpl:90] Listando todos los odontologos
+[2022-07-0722:07:03] [ DEBUG] [OdontologoServiceImpl:99] Buscando odontologo con matrícula: HGA571
+[2022-07-0722:21:41] [ DEBUG] [TurnoServiceImpl:39] Creando turno...
+[2022-07-0722:21:41] [ DEBUG] [TurnoServiceImpl:56] Guardando turno
+[2022-07-0722:21:41] [ ERROR] [GlobalExceptionHandler:16] could not execute statement; SQL [n/a]; constraint [FKQTJ6T7MULC2JMFKV92X4CTKWH]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+[2022-07-0722:22:51] [ DEBUG] [PacienteServiceImpl:39] Creando paciente...
+[2022-07-0722:22:51] [ DEBUG] [PacienteServiceImpl:58] Guardando paciente
+[2022-07-0722:22:54] [ DEBUG] [OdontologoServiceImpl:41] Creando odontólogo...
+[2022-07-0722:22:54] [ DEBUG] [OdontologoServiceImpl:58] Guardando odontologo
+[2022-07-0722:22:56] [ DEBUG] [TurnoServiceImpl:39] Creando turno...
+[2022-07-0722:22:56] [ DEBUG] [TurnoServiceImpl:56] Guardando turno
+[2022-07-0722:23:50] [ DEBUG] [TurnoServiceImpl:46] Buscando turno con id: 1
+[2022-07-0722:25:23] [ ERROR] [GlobalExceptionHandler:16] No serializer found for class org.hibernate.proxy.pojo.bytebuddy.ByteBuddyInterceptor and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS) (through reference chain: com.dh.clinicaOdontologica.model.Turno["paciente"]->com.dh.clinicaOdontologica.model.Paciente$HibernateProxy$OlODucOF["hibernateLazyInitializer"])

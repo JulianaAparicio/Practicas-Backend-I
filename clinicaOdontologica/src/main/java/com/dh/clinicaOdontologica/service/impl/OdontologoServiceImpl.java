@@ -20,13 +20,18 @@ import java.util.Set;
 @Service
 public class OdontologoServiceImpl implements IOdontologoService {
 
-    @Autowired
-    private IOdontologoRepository odontologoRepository;
+    private final IOdontologoRepository odontologoRepository;
+    private final Logger logger = Logger.getLogger(OdontologoServiceImpl.class);
+
 
     @Autowired
     ObjectMapper mapper;
 
-    private final Logger logger = Logger.getLogger(OdontologoServiceImpl.class);
+
+    @Autowired
+    public OdontologoServiceImpl(IOdontologoRepository odontologoRepository) {
+        this.odontologoRepository = odontologoRepository;
+    }
 
     @Override
     public void crearOdontologo(OdontologoDTO odontologoDTO) throws BadRequestException {
@@ -41,15 +46,13 @@ public class OdontologoServiceImpl implements IOdontologoService {
     @Override
     public OdontologoDTO buscarOdontologoPorId(Long id) throws ResourceNotFoundException {
         logger.debug("Buscando odontologo con id: " + id);
-        if (odontologoRepository.findById(id).isEmpty()){
-            throw new ResourceNotFoundException("No existe un odontólogo con id: " + id);
-        } else {
             Optional<Odontologo> odontologo = odontologoRepository.findById(id);
-            OdontologoDTO odontologoDTO;
-            odontologoDTO = mapper.convertValue(odontologo,OdontologoDTO.class);
-            return odontologoDTO;
+            if(odontologo.isPresent()){
+                return mapper.convertValue(odontologo,OdontologoDTO.class);
+            } else {
+                throw new ResourceNotFoundException("El odontólogo con id: " + id + " no existe.");
+            }
         }
-    }
 
     private void guardarOdontologo(OdontologoDTO odontologoDTO){
         logger.debug("Guardando odontologo");
