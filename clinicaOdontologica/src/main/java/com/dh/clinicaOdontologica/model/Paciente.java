@@ -25,7 +25,7 @@ public class Paciente {
     private String nombre;
 
     private String apellido;
-    @Column(unique = true)
+    @Column
     private String dni;
 
     @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)

@@ -62,7 +62,7 @@ public class PacienteServiceImpl implements IPacienteService {
 
     @Override
     public void modificarPaciente(PacienteDTO pacienteDTO) {
-        if (pacienteDTO != null){
+        if(pacienteDTO != null) {
             logger.debug("Modificando paciente");
             guardarPaciente(pacienteDTO);
         }

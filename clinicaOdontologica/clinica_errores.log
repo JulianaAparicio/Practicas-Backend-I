@@ -131,3 +131,29 @@
 [2022-07-0722:22:56] [ DEBUG] [TurnoServiceImpl:56] Guardando turno
 [2022-07-0722:23:50] [ DEBUG] [TurnoServiceImpl:46] Buscando turno con id: 1
 [2022-07-0722:25:23] [ ERROR] [GlobalExceptionHandler:16] No serializer found for class org.hibernate.proxy.pojo.bytebuddy.ByteBuddyInterceptor and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS) (through reference chain: com.dh.clinicaOdontologica.model.Turno["paciente"]->com.dh.clinicaOdontologica.model.Paciente$HibernateProxy$OlODucOF["hibernateLazyInitializer"])
+[2022-07-0911:07:11] [ DEBUG] [PacienteServiceImpl:39] Creando paciente...
+[2022-07-0911:07:11] [ DEBUG] [PacienteServiceImpl:58] Guardando paciente
+[2022-07-0911:07:17] [ DEBUG] [PacienteServiceImpl:46] Buscando paciente con id: 1
+[2022-07-0911:07:23] [ DEBUG] [PacienteServiceImpl:66] Modificando paciente
+[2022-07-0911:07:23] [ DEBUG] [PacienteServiceImpl:58] Guardando paciente
+[2022-07-0911:07:27] [ DEBUG] [PacienteServiceImpl:88] Listando todos los pacientes
+[2022-07-0911:37:04] [ DEBUG] [PacienteServiceImpl:39] Creando paciente...
+[2022-07-0911:37:04] [ DEBUG] [PacienteServiceImpl:58] Guardando paciente
+[2022-07-0911:37:11] [ DEBUG] [OdontologoServiceImpl:41] Creando odontólogo...
+[2022-07-0911:37:11] [ DEBUG] [OdontologoServiceImpl:58] Guardando odontologo
+[2022-07-0911:37:18] [ DEBUG] [TurnoServiceImpl:39] Creando turno...
+[2022-07-0911:37:18] [ DEBUG] [TurnoServiceImpl:56] Guardando turno
+[2022-07-0911:37:28] [ DEBUG] [TurnoServiceImpl:46] Buscando turno con id: 1
+[2022-07-0911:37:28] [ ERROR] [GlobalExceptionHandler:16] No serializer found for class org.hibernate.proxy.pojo.bytebuddy.ByteBuddyInterceptor and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS) (through reference chain: com.dh.clinicaOdontologica.model.Turno["paciente"]->com.dh.clinicaOdontologica.model.Paciente$HibernateProxy$8aYzjRQl["hibernateLazyInitializer"])
+[2022-07-0911:37:42] [ DEBUG] [PacienteServiceImpl:65] Modificando paciente
+[2022-07-0911:37:42] [ ERROR] [GlobalExceptionHandler:16] The given id must not be null!; nested exception is java.lang.IllegalArgumentException: The given id must not be null!
+[2022-07-0911:39:35] [ DEBUG] [PacienteServiceImpl:39] Creando paciente...
+[2022-07-0911:39:35] [ DEBUG] [PacienteServiceImpl:58] Guardando paciente
+[2022-07-0911:39:43] [ DEBUG] [PacienteServiceImpl:65] Modificando paciente
+[2022-07-0911:39:43] [ DEBUG] [PacienteServiceImpl:74] Actualizando los datos
+[2022-07-0911:39:43] [ ERROR] [GlobalExceptionHandler:16] No serializer found for class org.hibernate.proxy.pojo.bytebuddy.ByteBuddyInterceptor and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS) (through reference chain: com.dh.clinicaOdontologica.model.Paciente$HibernateProxy$cHj8zDOY["hibernateLazyInitializer"])
+[2022-07-0911:41:27] [ DEBUG] [PacienteServiceImpl:39] Creando paciente...
+[2022-07-0911:41:27] [ DEBUG] [PacienteServiceImpl:58] Guardando paciente
+[2022-07-0911:41:31] [ DEBUG] [PacienteServiceImpl:66] Modificando odontologo
+[2022-07-0911:41:31] [ DEBUG] [PacienteServiceImpl:58] Guardando paciente
+[2022-07-0911:41:40] [ DEBUG] [PacienteServiceImpl:46] Buscando paciente con id: 1
