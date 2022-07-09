@@ -4,9 +4,7 @@ import com.dh.clinicaOdontologica.dto.TurnoDTO;
 import com.dh.clinicaOdontologica.exceptions.BadRequestException;
 import com.dh.clinicaOdontologica.exceptions.ResourceNotFoundException;
 import com.dh.clinicaOdontologica.service.ITurnoService;
-import org.hibernate.service.spi.ServiceException;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -25,7 +23,7 @@ public class TurnoController {
     }
 
     @GetMapping("/{id}")
-    public TurnoDTO buscarTurnoPorId(@PathVariable Long id){
+    public TurnoDTO buscarTurnoPorId(@PathVariable Long id) throws ResourceNotFoundException {
         return turnoService.buscarTurnoPorId(id);
     }
 
@@ -35,7 +33,7 @@ public class TurnoController {
     }
 
     @PutMapping
-    public ResponseEntity<?> modificarTurno(@RequestBody TurnoDTO turnoDTO){
+    public ResponseEntity<?> modificarTurno(@RequestBody TurnoDTO turnoDTO) throws BadRequestException {
         turnoService.modificarTurno(turnoDTO);
         return ResponseEntity.ok("El turno ha sido modificado.");
     }
@@ -44,11 +42,6 @@ public class TurnoController {
     public ResponseEntity<?> eliminarTurno(@PathVariable Long id) throws ResourceNotFoundException {
         turnoService.eliminarTurno(id);
         return ResponseEntity.ok("El turno ha sido eliminado.");
-    }
-
-    @ExceptionHandler({ ServiceException.class})
-    public ResponseEntity<String> handleException(ServiceException ex) {
-        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ex.getMessage());
     }
 
 

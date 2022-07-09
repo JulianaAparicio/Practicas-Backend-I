@@ -44,13 +44,11 @@ public class PacienteServiceImpl implements IPacienteService {
     @Override
     public PacienteDTO buscarPacientePorId(Long id) throws ResourceNotFoundException {
         logger.debug("Buscando paciente con id: " + id);
-        if (pacienteRepository.findById(id).isEmpty()){
-            throw new ResourceNotFoundException("No existe un paciente con id: " + id);
+        Optional<Paciente> paciente = pacienteRepository.findById(id);
+        if(paciente.isPresent()){
+            return mapper.convertValue(paciente, PacienteDTO.class);
         } else {
-            Optional<Paciente> paciente = pacienteRepository.findById(id);
-            PacienteDTO pacienteDTO;
-            pacienteDTO = mapper.convertValue(paciente,PacienteDTO.class);
-            return pacienteDTO;
+            throw new ResourceNotFoundException("El paciente con id: " + id + " no existe.");
         }
     }
 
@@ -74,9 +72,10 @@ public class PacienteServiceImpl implements IPacienteService {
     public void eliminarPaciente(Long id) throws ResourceNotFoundException {
         if (pacienteRepository.findById(id).isEmpty()){
             throw new ResourceNotFoundException("No existe un paciente con id: " + id);
+        } else {
+            logger.debug("Eliminando el paciente con id: " + id);
+            pacienteRepository.delete(pacienteRepository.findById(id).get());
         }
-        logger.debug("Eliminando el paciente con id: " + id);
-        pacienteRepository.delete(pacienteRepository.findById(id).get());
     }
 
     @Override

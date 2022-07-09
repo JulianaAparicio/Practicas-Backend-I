@@ -1,6 +1,7 @@
 package com.dh.clinicaOdontologica.service.impl;
 
 import com.dh.clinicaOdontologica.exceptions.BadRequestException;
+import com.dh.clinicaOdontologica.exceptions.ResourceNotFoundException;
 import com.dh.clinicaOdontologica.model.Odontologo;
 import com.dh.clinicaOdontologica.model.Paciente;
 import com.dh.clinicaOdontologica.dto.OdontologoDTO;
@@ -29,7 +30,7 @@ class TurnoServiceImplTest {
     ObjectMapper mapper;
 
     @Test
-    public void deberiaCrearUnTurno() throws BadRequestException {
+    public void deberiaCrearUnTurno() throws BadRequestException, ResourceNotFoundException {
 
         // Dado:
         OdontologoDTO odontologoDTO = new OdontologoDTO();

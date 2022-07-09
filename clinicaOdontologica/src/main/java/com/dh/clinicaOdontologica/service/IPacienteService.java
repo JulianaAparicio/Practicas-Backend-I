@@ -12,9 +12,7 @@ public interface IPacienteService {
     PacienteDTO buscarPacientePorId(Long id) throws ResourceNotFoundException;
     void modificarPaciente(PacienteDTO pacienteDTO) throws BadRequestException;
     void eliminarPaciente(Long id)throws ResourceNotFoundException;
-    Set<PacienteDTO> listarTodosLosPacientes() throws ResourceNotFoundException;
+    Set<PacienteDTO> listarTodosLosPacientes();
     PacienteDTO buscarPacientePorEmail(String email) throws ResourceNotFoundException;
-
-    void invocarMetodoConError();
 
 }

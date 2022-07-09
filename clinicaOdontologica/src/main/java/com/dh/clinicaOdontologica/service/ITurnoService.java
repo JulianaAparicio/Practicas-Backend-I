@@ -8,11 +8,9 @@ import java.util.Set;
 
 public interface ITurnoService {
     void crearTurno(TurnoDTO turnoDTO) throws BadRequestException;
-    TurnoDTO buscarTurnoPorId(Long id);
-    void modificarTurno(TurnoDTO turnoDTO);
+    TurnoDTO buscarTurnoPorId(Long id) throws ResourceNotFoundException;
+    void modificarTurno(TurnoDTO turnoDTO) throws BadRequestException;
     void eliminarTurno(Long id) throws ResourceNotFoundException;
     Set<TurnoDTO> listarTodosLosTurnos();
-
-    void invocarMetodoConError();
 
 }

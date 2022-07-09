@@ -42,14 +42,14 @@ public class TurnoServiceImpl implements ITurnoService {
     }
 
     @Override
-    public TurnoDTO buscarTurnoPorId(Long id) {
+    public TurnoDTO buscarTurnoPorId(Long id) throws ResourceNotFoundException {
         logger.debug("Buscando turno con id: " + id);
         Optional<Turno> turno = turnoRepository.findById(id);
-        TurnoDTO turnoDTO = null;
         if(turno.isPresent()){
-            turnoDTO = mapper.convertValue(turno,TurnoDTO.class);
+            return mapper.convertValue(turno, TurnoDTO.class);
+        } else {
+            throw new ResourceNotFoundException("El turno con id: " + id + " no existe.");
         }
-        return turnoDTO;
     }
 
     private void guardarTurno(TurnoDTO turnoDTO){
@@ -59,9 +59,11 @@ public class TurnoServiceImpl implements ITurnoService {
     }
 
     @Override
-    public void modificarTurno(TurnoDTO turnoDTO) {
-        if (turnoDTO != null) {
-            logger.debug("Modificando turno");
+    public void modificarTurno(TurnoDTO turnoDTO) throws BadRequestException {
+        if (turnoDTO == null){
+            throw new BadRequestException("Los datos del turno no pueden estar vacíos.");
+        } else {
+            logger.debug("Modificando turno.");
             guardarTurno(turnoDTO);
         }
     }
@@ -78,18 +80,19 @@ public class TurnoServiceImpl implements ITurnoService {
     }
 
     @Override
-    public Set<TurnoDTO> listarTodosLosTurnos() {
+    public Set<TurnoDTO> listarTodosLosTurnos() throws ServiceException {
         List<Turno> turnos = turnoRepository.findAll();
-        Set<TurnoDTO> turnosDTO = new HashSet<>();
 
-        for (Turno turno : turnos){
-            turnosDTO.add(mapper.convertValue(turno,TurnoDTO.class));
+        if (turnos.isEmpty()) {
+            throw new ServiceException("No hay turnos para listar.");
+        } else {
+            Set<TurnoDTO> turnosDTO = new HashSet<>();
+            for (Turno turno : turnos) {
+                turnosDTO.add(mapper.convertValue(turno, TurnoDTO.class));
+            }
+            logger.debug("Listando todos los turnos");
+            return turnosDTO;
         }
-        logger.debug("Listando todos los turnos");
-        return turnosDTO;
     }
 
-    public void invocarMetodoConError() throws ServiceException {
-        throw new ServiceException("Ha ocurrido un error en la capa de servicio");
-    }
 }
