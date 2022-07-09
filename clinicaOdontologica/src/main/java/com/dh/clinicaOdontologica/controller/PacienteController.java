@@ -11,6 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
+import java.util.Set;
 
 @RestController
 @RequestMapping("/pacientes")
@@ -21,8 +22,8 @@ public class PacienteController {
 
     @PostMapping()
     public ResponseEntity<?> crearPaciente(@RequestBody PacienteDTO pacienteDTO) throws BadRequestException {
-    pacienteService.crearPaciente(pacienteDTO);
-    return ResponseEntity.ok(HttpStatus.OK);
+        pacienteService.crearPaciente(pacienteDTO);
+        return ResponseEntity.ok("El paciente se ha creado exitosamente.");
     }
 
     @GetMapping("/{id}")
@@ -31,20 +32,20 @@ public class PacienteController {
     }
 
     @GetMapping
-    public Collection<PacienteDTO> listarTodosLosPacientes(){
+    public Collection<PacienteDTO> listarTodosLosPacientes() {
         return pacienteService.listarTodosLosPacientes();
     }
 
     @PutMapping
-    public ResponseEntity<?> modificarPaciente(@RequestBody PacienteDTO pacienteDTO){
+    public ResponseEntity<?> modificarPaciente(@RequestBody PacienteDTO pacienteDTO) throws BadRequestException {
         pacienteService.modificarPaciente(pacienteDTO);
-        return ResponseEntity.ok(HttpStatus.OK);
+        return ResponseEntity.ok("El paciente ha sido modificado.");
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<?> eliminarPaciente(@PathVariable Long id) throws ResourceNotFoundException {
         pacienteService.eliminarPaciente(id);
-        return ResponseEntity.ok("Eliminado");
+        return ResponseEntity.ok("El paciente ha sido eliminado.");
     }
 
     @GetMapping("/buscarPorEmail/{email}")
@@ -52,17 +53,10 @@ public class PacienteController {
         return pacienteService.buscarPacientePorEmail(email);
     }
 
-    @ExceptionHandler({ResourceNotFoundException.class})
-    public ResponseEntity<String> procesarErrorNotFound(ResourceNotFoundException ex){
-        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(ex.getMessage());
-    }
-
     @ExceptionHandler({ ServiceException.class})
     public ResponseEntity<String> handleException(ServiceException ex) {
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ex.getMessage());
     }
-
-
 
 
 }

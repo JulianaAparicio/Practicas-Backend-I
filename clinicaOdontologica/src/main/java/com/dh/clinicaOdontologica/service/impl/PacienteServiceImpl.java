@@ -1,6 +1,7 @@
 package com.dh.clinicaOdontologica.service.impl;
 
 import com.dh.clinicaOdontologica.exceptions.BadRequestException;
+import com.dh.clinicaOdontologica.exceptions.ServiceException;
 import com.dh.clinicaOdontologica.exceptions.ResourceNotFoundException;
 import com.dh.clinicaOdontologica.model.Paciente;
 import com.dh.clinicaOdontologica.dto.PacienteDTO;
@@ -8,7 +9,6 @@ import com.dh.clinicaOdontologica.repository.IPacienteRepository;
 import com.dh.clinicaOdontologica.service.IPacienteService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.log4j.Logger;
-import org.hibernate.service.spi.ServiceException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -80,14 +80,13 @@ public class PacienteServiceImpl implements IPacienteService {
     }
 
     @Override
-    public Set<PacienteDTO> listarTodosLosPacientes() throws ResourceNotFoundException {
+    public Set<PacienteDTO> listarTodosLosPacientes() throws ServiceException {
         List<Paciente> pacientes = pacienteRepository.findAll();
 
         if (pacientes.isEmpty()){
-            throw new ResourceNotFoundException("No hay pacientes para listar.");
+            throw new ServiceException("No hay pacientes para listar.");
         } else {
             Set<PacienteDTO> pacientesDTO = new HashSet<>();
-
             for (Paciente paciente : pacientes){
                 pacientesDTO.add(mapper.convertValue(paciente,PacienteDTO.class));
             }
@@ -106,10 +105,6 @@ public class PacienteServiceImpl implements IPacienteService {
             pacienteDTO = mapper.convertValue(paciente,PacienteDTO.class);
             return pacienteDTO;
         }
-    }
-
-    public void invocarMetodoConError() throws ServiceException {
-        throw new ServiceException("Ha ocurrido un error en la capa de servicio");
     }
 
 

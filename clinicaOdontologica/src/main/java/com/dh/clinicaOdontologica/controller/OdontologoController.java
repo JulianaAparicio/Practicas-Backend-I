@@ -21,7 +21,7 @@ public class OdontologoController {
     @PostMapping
     public ResponseEntity<?> crearOdontologo(@RequestBody OdontologoDTO odontologoDTO) throws BadRequestException  {
         odontologoService.crearOdontologo(odontologoDTO);
-        return ResponseEntity.ok(HttpStatus.OK);
+        return ResponseEntity.ok("El odontólogo ha sido creado exitosamente.");
     }
 
     @GetMapping("/{id}")
@@ -37,13 +37,13 @@ public class OdontologoController {
     @PutMapping
     public ResponseEntity<?> modificarOdontologo(@RequestBody OdontologoDTO odontologoDTO){
         odontologoService.modificarOdontologo(odontologoDTO);
-        return ResponseEntity.ok(HttpStatus.OK);
+        return ResponseEntity.ok("El odontólogo ha sido modificado.");
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<?> eliminarOdontologo(@PathVariable Long id) throws ResourceNotFoundException {
         odontologoService.eliminarOdontologo(id);
-        return ResponseEntity.ok("Eliminado");
+        return ResponseEntity.ok("El odontólogo ha sido eliminado");
     }
 
     @GetMapping("/buscarPorMatricula/{matricula}")

@@ -21,7 +21,7 @@ public class TurnoController {
     @PostMapping
     public ResponseEntity<?> crearTurno(@RequestBody TurnoDTO turnoDTO) throws BadRequestException {
         turnoService.crearTurno(turnoDTO);
-        return ResponseEntity.ok(HttpStatus.OK);
+        return ResponseEntity.ok("El turno ha sido creado con éxito.");
     }
 
     @GetMapping("/{id}")
@@ -37,13 +37,13 @@ public class TurnoController {
     @PutMapping
     public ResponseEntity<?> modificarTurno(@RequestBody TurnoDTO turnoDTO){
         turnoService.modificarTurno(turnoDTO);
-        return ResponseEntity.ok(HttpStatus.OK);
+        return ResponseEntity.ok("El turno ha sido modificado.");
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<?> eliminarTurno(@PathVariable Long id) throws ResourceNotFoundException {
         turnoService.eliminarTurno(id);
-        return ResponseEntity.ok("Eliminado");
+        return ResponseEntity.ok("El turno ha sido eliminado.");
     }
 
     @ExceptionHandler({ ServiceException.class})
