@@ -34,7 +34,7 @@ public class PacienteServiceImpl implements IPacienteService {
     @Override
     public void crearPaciente(PacienteDTO pacienteDTO) throws BadRequestException {
         if (pacienteDTO == null){
-            throw new BadRequestException("El paciente que está intentando crear está vacío.");
+            throw new BadRequestException("Los datos del paciente que está intentando crear están vacíos.");
         } else {
             logger.debug("Creando paciente...");
             guardarPaciente(pacienteDTO);
@@ -61,8 +61,10 @@ public class PacienteServiceImpl implements IPacienteService {
     }
 
     @Override
-    public void modificarPaciente(PacienteDTO pacienteDTO) {
-        if(pacienteDTO != null) {
+    public void modificarPaciente(PacienteDTO pacienteDTO) throws BadRequestException {
+        if (pacienteDTO == null){
+            throw new BadRequestException("Los datos del paciente no pueden estar vacíos.");
+        } else {
             logger.debug("Modificando paciente");
             guardarPaciente(pacienteDTO);
         }
@@ -78,15 +80,20 @@ public class PacienteServiceImpl implements IPacienteService {
     }
 
     @Override
-    public Set<PacienteDTO> listarTodosLosPacientes() {
+    public Set<PacienteDTO> listarTodosLosPacientes() throws ResourceNotFoundException {
         List<Paciente> pacientes = pacienteRepository.findAll();
-        Set<PacienteDTO> pacientesDTO = new HashSet<>();
 
-        for (Paciente paciente : pacientes){
-            pacientesDTO.add(mapper.convertValue(paciente,PacienteDTO.class));
+        if (pacientes.isEmpty()){
+            throw new ResourceNotFoundException("No hay pacientes para listar.");
+        } else {
+            Set<PacienteDTO> pacientesDTO = new HashSet<>();
+
+            for (Paciente paciente : pacientes){
+                pacientesDTO.add(mapper.convertValue(paciente,PacienteDTO.class));
+            }
+            logger.debug("Listando todos los pacientes");
+            return pacientesDTO;
         }
-        logger.debug("Listando todos los pacientes");
-        return pacientesDTO;
     }
 
     @Override
