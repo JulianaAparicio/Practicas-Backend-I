@@ -187,3 +187,38 @@
 [2022-07-1013:16:32] [ DEBUG] [OdontologoServiceImpl:58] Guardando odontólogo
 [2022-07-1013:18:02] [ DEBUG] [OdontologoServiceImpl:41] Creando odontólogo...
 [2022-07-1013:18:02] [ DEBUG] [OdontologoServiceImpl:58] Guardando odontólogo
+[2022-07-1013:37:07] [ DEBUG] [PacienteServiceImpl:39] Creando paciente...
+[2022-07-1013:37:07] [ DEBUG] [PacienteServiceImpl:56] Guardando paciente
+[2022-07-1013:37:33] [ DEBUG] [PacienteServiceImpl:92] Listando todos los pacientes
+[2022-07-1013:37:40] [ DEBUG] [PacienteServiceImpl:39] Creando paciente...
+[2022-07-1013:37:40] [ DEBUG] [PacienteServiceImpl:56] Guardando paciente
+[2022-07-1013:37:57] [ ERROR] [GlobalExceptionHandler:16] Required request body is missing: public org.springframework.http.ResponseEntity<?> com.dh.clinicaOdontologica.controller.PacienteController.crearPaciente(com.dh.clinicaOdontologica.dto.PacienteDTO) throws com.dh.clinicaOdontologica.exceptions.BadRequestException
+[2022-07-1013:38:47] [ DEBUG] [PacienteServiceImpl:76] Eliminando el paciente con id: 1
+[2022-07-1013:38:51] [ DEBUG] [PacienteServiceImpl:92] Listando todos los pacientes
+[2022-07-1013:38:59] [ DEBUG] [PacienteServiceImpl:76] Eliminando el paciente con id: 2
+[2022-07-1013:39:02] [ ERROR] [GlobalExceptionHandler:16] No hay pacientes para listar.
+[2022-07-1013:40:25] [ DEBUG] [PacienteServiceImpl:46] Buscando paciente con id: 1
+[2022-07-1013:40:26] [ ERROR] [GlobalExceptionHandler:16] El paciente con id: 1 no existe.
+[2022-07-1013:42:35] [ DEBUG] [PacienteServiceImpl:46] Buscando paciente con id: 1
+[2022-07-1013:42:35] [ ERROR] [GlobalExceptionHandler:16] El paciente con id: 1 no existe.
+[2022-07-1013:42:41] [ ERROR] [GlobalExceptionHandler:16] No existe un paciente con id: 2
+[2022-07-1014:01:21] [ DEBUG] [PacienteServiceImpl:46] Buscando paciente con id: 1
+[2022-07-1014:01:21] [ ERROR] [GlobalExceptionHandler:17] El paciente con id: 1 no existe.
+[2022-07-1014:06:31] [ DEBUG] [PacienteServiceImpl:39] Creando paciente...
+[2022-07-1014:06:31] [ DEBUG] [PacienteServiceImpl:56] Guardando paciente
+[2022-07-1014:06:35] [ DEBUG] [OdontologoServiceImpl:41] Creando odontólogo...
+[2022-07-1014:06:35] [ DEBUG] [OdontologoServiceImpl:58] Guardando odontólogo
+[2022-07-1014:06:43] [ DEBUG] [TurnoServiceImpl:39] Creando turno...
+[2022-07-1014:06:43] [ DEBUG] [TurnoServiceImpl:56] Guardando turno
+[2022-07-1014:06:49] [ DEBUG] [TurnoServiceImpl:46] Buscando turno con id: 1
+[2022-07-1014:07:54] [ DEBUG] [OdontologoServiceImpl:48] Buscando odontólogo con id: 1
+[2022-07-1014:31:48] [ DEBUG] [PacienteServiceImpl:39] Creando paciente...
+[2022-07-1014:31:48] [ DEBUG] [PacienteServiceImpl:56] Guardando paciente
+[2022-07-1014:31:51] [ DEBUG] [OdontologoServiceImpl:41] Creando odontólogo...
+[2022-07-1014:31:51] [ DEBUG] [OdontologoServiceImpl:58] Guardando odontólogo
+[2022-07-1014:31:54] [ DEBUG] [TurnoServiceImpl:39] Creando turno...
+[2022-07-1014:31:54] [ DEBUG] [TurnoServiceImpl:56] Guardando turno
+[2022-07-1014:31:57] [ DEBUG] [TurnoServiceImpl:46] Buscando turno con id: 1
+[2022-07-1014:32:03] [ DEBUG] [OdontologoServiceImpl:48] Buscando odontólogo con id: 1
+[2022-07-1014:32:09] [ DEBUG] [TurnoServiceImpl:75] Eliminando el turno con id: 1
+[2022-07-1014:32:14] [ ERROR] [GlobalExceptionHandler:31] No hay turnos para listar.

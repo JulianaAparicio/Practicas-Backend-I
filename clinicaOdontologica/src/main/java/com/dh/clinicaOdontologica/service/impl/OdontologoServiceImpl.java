@@ -36,7 +36,7 @@ public class OdontologoServiceImpl implements IOdontologoService {
     @Override
     public void crearOdontologo(OdontologoDTO odontologoDTO) throws BadRequestException {
         if (odontologoDTO == null){
-            throw new BadRequestException("Los datos del odontólogo que está intentando crear están vacíos.");
+            throw new BadRequestException("El odontólogo que está intentando crear es nulo.");
         } else {
             logger.debug("Creando odontólogo...");
             guardarOdontologo(odontologoDTO);

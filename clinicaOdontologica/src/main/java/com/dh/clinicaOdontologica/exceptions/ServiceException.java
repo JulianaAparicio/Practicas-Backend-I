@@ -1,8 +1,10 @@
 package com.dh.clinicaOdontologica.exceptions;
 
-import org.hibernate.HibernateException;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.ResponseStatus;
 
-public class ServiceException extends HibernateException {
+@ResponseStatus(value = HttpStatus.BAD_REQUEST)
+public class ServiceException extends Exception {
     public ServiceException(String message) {
         super(message);
     }

@@ -34,7 +34,7 @@ public class PacienteServiceImpl implements IPacienteService {
     @Override
     public void crearPaciente(PacienteDTO pacienteDTO) throws BadRequestException {
         if (pacienteDTO == null){
-            throw new BadRequestException("Los datos del paciente que está intentando crear están vacíos.");
+            throw new BadRequestException("El paciente que está intentando crear es nulo.");
         } else {
             logger.debug("Creando paciente...");
             guardarPaciente(pacienteDTO);

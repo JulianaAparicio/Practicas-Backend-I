@@ -3,6 +3,7 @@ package com.dh.clinicaOdontologica.service;
 import com.dh.clinicaOdontologica.dto.PacienteDTO;
 import com.dh.clinicaOdontologica.exceptions.BadRequestException;
 import com.dh.clinicaOdontologica.exceptions.ResourceNotFoundException;
+import com.dh.clinicaOdontologica.exceptions.ServiceException;
 
 import java.util.Set;
 
@@ -12,7 +13,7 @@ public interface IPacienteService {
     PacienteDTO buscarPacientePorId(Long id) throws ResourceNotFoundException;
     void modificarPaciente(PacienteDTO pacienteDTO) throws BadRequestException;
     void eliminarPaciente(Long id)throws ResourceNotFoundException;
-    Set<PacienteDTO> listarTodosLosPacientes();
+    Set<PacienteDTO> listarTodosLosPacientes() throws ServiceException;
     PacienteDTO buscarPacientePorEmail(String email) throws ResourceNotFoundException;
 
 }

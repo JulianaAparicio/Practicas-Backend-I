@@ -34,7 +34,7 @@ public class TurnoServiceImpl implements ITurnoService {
     @Override
     public void crearTurno(TurnoDTO turnoDTO) throws BadRequestException {
         if (turnoDTO.getPaciente().getId() == null || turnoDTO.getOdontologo().getId() == null){
-            throw new BadRequestException("El turno que está intentando crear no posee un paciente u odontólogo.");
+            throw new BadRequestException("El turno que está intentando crear posee un paciente u odontólogo nulos.");
         } else {
             logger.debug("Creando turno...");
             guardarTurno(turnoDTO);
@@ -44,11 +44,11 @@ public class TurnoServiceImpl implements ITurnoService {
     @Override
     public TurnoDTO buscarTurnoPorId(Long id) throws ResourceNotFoundException {
         logger.debug("Buscando turno con id: " + id);
-        Optional<Turno> turno = turnoRepository.findById(id);
-        if(turno.isPresent()){
-            return mapper.convertValue(turno, TurnoDTO.class);
-        } else {
+        Turno turno = turnoRepository.findById(id).orElse(null);
+        if(turno==null){
             throw new ResourceNotFoundException("El turno con id: " + id + " no existe.");
+        } else {
+            return mapper.convertValue(turno, TurnoDTO.class);
         }
     }
 

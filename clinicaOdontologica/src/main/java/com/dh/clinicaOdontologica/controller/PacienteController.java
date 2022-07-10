@@ -3,8 +3,8 @@ package com.dh.clinicaOdontologica.controller;
 import com.dh.clinicaOdontologica.dto.PacienteDTO;
 import com.dh.clinicaOdontologica.exceptions.BadRequestException;
 import com.dh.clinicaOdontologica.exceptions.ResourceNotFoundException;
+import com.dh.clinicaOdontologica.exceptions.ServiceException;
 import com.dh.clinicaOdontologica.service.IPacienteService;
-import org.hibernate.service.spi.ServiceException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -32,7 +32,7 @@ public class PacienteController {
     }
 
     @GetMapping
-    public Collection<PacienteDTO> listarTodosLosPacientes() {
+    public Collection<PacienteDTO> listarTodosLosPacientes() throws ServiceException {
         return pacienteService.listarTodosLosPacientes();
     }
 
@@ -51,11 +51,6 @@ public class PacienteController {
     @GetMapping("/buscarPorEmail/{email}")
     public PacienteDTO buscarPacientePorEmail(@PathVariable String email) throws ResourceNotFoundException {
         return pacienteService.buscarPacientePorEmail(email);
-    }
-
-    @ExceptionHandler({ ServiceException.class})
-    public ResponseEntity<String> handleException(ServiceException ex) {
-        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ex.getMessage());
     }
 
 
