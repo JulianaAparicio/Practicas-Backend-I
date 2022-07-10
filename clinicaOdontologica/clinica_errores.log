@@ -222,3 +222,14 @@
 [2022-07-1014:32:03] [ DEBUG] [OdontologoServiceImpl:48] Buscando odontólogo con id: 1
 [2022-07-1014:32:09] [ DEBUG] [TurnoServiceImpl:75] Eliminando el turno con id: 1
 [2022-07-1014:32:14] [ ERROR] [GlobalExceptionHandler:31] No hay turnos para listar.
+[2022-07-1016:08:27] [ DEBUG] [PacienteServiceImpl:39] Creando paciente...
+[2022-07-1016:08:27] [ DEBUG] [PacienteServiceImpl:56] Guardando paciente
+[2022-07-1016:08:30] [ DEBUG] [OdontologoServiceImpl:41] Creando odontólogo...
+[2022-07-1016:08:30] [ DEBUG] [OdontologoServiceImpl:58] Guardando odontólogo
+[2022-07-1016:08:33] [ DEBUG] [TurnoServiceImpl:39] Creando turno...
+[2022-07-1016:08:33] [ DEBUG] [TurnoServiceImpl:56] Guardando turno
+[2022-07-1016:08:37] [ DEBUG] [TurnoServiceImpl:46] Buscando turno con id: 1
+[2022-07-1016:08:49] [ DEBUG] [TurnoServiceImpl:93] Listando todos los turnos
+[2022-07-1016:08:56] [ DEBUG] [TurnoServiceImpl:66] Modificando turno.
+[2022-07-1016:08:56] [ DEBUG] [TurnoServiceImpl:56] Guardando turno
+[2022-07-1016:09:00] [ DEBUG] [TurnoServiceImpl:93] Listando todos los turnos
