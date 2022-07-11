@@ -4,7 +4,6 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.time.LocalDate;
 
 @Getter
 @Setter
@@ -25,14 +24,14 @@ public class Turno {
     @JoinColumn(name = "odontologo_id", nullable = false)
     private Odontologo odontologo;
 
-    private LocalDate fecha;
+    private String fecha;
 
     private String hora;
 
     public Turno() {
     }
 
-    public Turno(Paciente paciente, Odontologo odontologo, LocalDate fecha, String hora) {
+    public Turno(Paciente paciente, Odontologo odontologo, String fecha, String hora) {
         this.paciente = paciente;
         this.odontologo = odontologo;
         this.fecha = fecha;

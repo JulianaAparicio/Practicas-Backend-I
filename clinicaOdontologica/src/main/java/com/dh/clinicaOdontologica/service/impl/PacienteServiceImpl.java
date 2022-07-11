@@ -60,8 +60,8 @@ public class PacienteServiceImpl implements IPacienteService {
 
     @Override
     public void modificarPaciente(PacienteDTO pacienteDTO) throws BadRequestException {
-        if (pacienteDTO == null){
-            throw new BadRequestException("Los datos del paciente no pueden estar vacíos.");
+        if (pacienteDTO.getId() == null) {
+            throw new BadRequestException("El paciente que está intentando modificar no existe.");
         } else {
             logger.debug("Modificando paciente");
             guardarPaciente(pacienteDTO);

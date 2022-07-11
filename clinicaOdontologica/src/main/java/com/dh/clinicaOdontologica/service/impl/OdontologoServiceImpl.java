@@ -54,16 +54,16 @@ public class OdontologoServiceImpl implements IOdontologoService {
             }
         }
 
-    private void guardarOdontologo(OdontologoDTO odontologoDTO){
-        logger.debug("Guardando odontólogo");
-        Odontologo odontologo = mapper.convertValue(odontologoDTO, Odontologo.class);
-        odontologoRepository.save(odontologo);
+    private void guardarOdontologo(OdontologoDTO odontologoDTO) {
+            logger.debug("Guardando odontólogo");
+            Odontologo odontologo = mapper.convertValue(odontologoDTO, Odontologo.class);
+            odontologoRepository.save(odontologo);
     }
 
     @Override
     public void modificarOdontologo(OdontologoDTO odontologoDTO) throws BadRequestException {
-        if (odontologoDTO == null){
-            throw new BadRequestException("Los datos del odontólogo no pueden estar vacíos.");
+        if (odontologoDTO.getId() == null) {
+            throw new BadRequestException("El odontólogo que está intentando modificar no existe.");
         } else {
             logger.debug("Modificando odontólogo");
             guardarOdontologo(odontologoDTO);

@@ -34,7 +34,8 @@ public class TurnoServiceImpl implements ITurnoService {
     @Override
     public void crearTurno(TurnoDTO turnoDTO) throws BadRequestException {
         if (turnoDTO.getPaciente().getId() == null || turnoDTO.getOdontologo().getId() == null){
-            throw new BadRequestException("El turno que está intentando crear posee un paciente u odontólogo nulos.");
+            throw new BadRequestException("El turno que está intentando crear posee un paciente u " +
+                    "odontólogo nulos.");
         } else {
             logger.debug("Creando turno...");
             guardarTurno(turnoDTO);
@@ -45,23 +46,37 @@ public class TurnoServiceImpl implements ITurnoService {
     public TurnoDTO buscarTurnoPorId(Long id) throws ResourceNotFoundException {
         logger.debug("Buscando turno con id: " + id);
         Turno turno = turnoRepository.findById(id).orElse(null);
-        if(turno==null){
+        if(turno == null) {
             throw new ResourceNotFoundException("El turno con id: " + id + " no existe.");
         } else {
             return mapper.convertValue(turno, TurnoDTO.class);
         }
     }
 
-    private void guardarTurno(TurnoDTO turnoDTO){
-        logger.debug("Guardando turno");
-        Turno turno = mapper.convertValue(turnoDTO,Turno.class);
-        turnoRepository.save(turno);
+    private void guardarTurno(TurnoDTO turnoDTO) throws ServiceException {
+        Set<Turno> turnos = turnoDTO.getOdontologo().getTurnos();
+
+        if (turnos == null){
+            logger.debug("Guardando turno");
+            Turno turno = mapper.convertValue(turnoDTO,Turno.class);
+            turnoRepository.save(turno);
+
+        } else {
+            for (Turno turno:turnos) {
+                if (turno.getFecha().equals(turnoDTO.getFecha())){
+                    throw new ServiceException("El odontólogo asignado al turno ya está ocupado en esa fecha. " +
+                            "Por favor intente nuevamente.");
+                }
+            }
+            logger.debug("Creando turno...");
+            guardarTurno(turnoDTO);
+        }
     }
 
     @Override
     public void modificarTurno(TurnoDTO turnoDTO) throws BadRequestException {
-        if (turnoDTO == null){
-            throw new BadRequestException("Los datos del turno no pueden estar vacíos.");
+        if (turnoDTO.getId() == null){
+            throw new BadRequestException("El turno que está intentando modificar no existe.");
         } else {
             logger.debug("Modificando turno.");
             guardarTurno(turnoDTO);

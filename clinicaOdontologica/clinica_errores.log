@@ -233,3 +233,109 @@
 [2022-07-1016:08:56] [ DEBUG] [TurnoServiceImpl:66] Modificando turno.
 [2022-07-1016:08:56] [ DEBUG] [TurnoServiceImpl:56] Guardando turno
 [2022-07-1016:09:00] [ DEBUG] [TurnoServiceImpl:93] Listando todos los turnos
+[2022-07-1118:53:21] [ DEBUG] [OdontologoServiceImpl:38] Creando odontólogo...
+[2022-07-1119:03:58] [ DEBUG] [OdontologoServiceImpl:41] Creando odontólogo...
+[2022-07-1119:03:58] [ DEBUG] [OdontologoServiceImpl:58] Guardando odontólogo
+[2022-07-1119:04:03] [ DEBUG] [OdontologoServiceImpl:48] Buscando odontólogo con id: 1
+[2022-07-1119:04:09] [ DEBUG] [OdontologoServiceImpl:104] Buscando odontólogo con matrícula: HGA571
+[2022-07-1119:04:19] [ DEBUG] [OdontologoServiceImpl:68] Modificando odontólogo
+[2022-07-1119:04:19] [ DEBUG] [OdontologoServiceImpl:58] Guardando odontólogo
+[2022-07-1119:04:24] [ DEBUG] [OdontologoServiceImpl:104] Buscando odontólogo con matrícula: HGA571
+[2022-07-1119:04:28] [ DEBUG] [OdontologoServiceImpl:48] Buscando odontólogo con id: 1
+[2022-07-1119:14:03] [ DEBUG] [OdontologoServiceImpl:41] Creando odontólogo...
+[2022-07-1119:14:03] [ DEBUG] [OdontologoServiceImpl:58] Guardando odontólogo
+[2022-07-1119:14:09] [ DEBUG] [OdontologoServiceImpl:48] Buscando odontólogo con id: 1
+[2022-07-1119:14:13] [ DEBUG] [OdontologoServiceImpl:104] Buscando odontólogo con matrícula: HGA571
+[2022-07-1119:14:36] [ DEBUG] [PacienteServiceImpl:39] Creando paciente...
+[2022-07-1119:14:36] [ DEBUG] [PacienteServiceImpl:56] Guardando paciente
+[2022-07-1119:14:41] [ ERROR] [GlobalExceptionHandler:17] No existe un paciente con email: pia@digital.com
+[2022-07-1119:16:27] [ ERROR] [GlobalExceptionHandler:17] No existe un odontólogo con matrícula: HGA57
+[2022-07-1119:16:31] [ DEBUG] [OdontologoServiceImpl:104] Buscando odontólogo con matrícula: HGA571
+[2022-07-1119:16:35] [ DEBUG] [OdontologoServiceImpl:48] Buscando odontólogo con id: 5
+[2022-07-1119:16:35] [ ERROR] [GlobalExceptionHandler:17] El odontólogo con id: 5 no existe.
+[2022-07-1119:16:40] [ DEBUG] [OdontologoServiceImpl:48] Buscando odontólogo con id: 1
+[2022-07-1119:16:59] [ DEBUG] [OdontologoServiceImpl:94] Listando todos los odontólogos
+[2022-07-1119:17:02] [ DEBUG] [PacienteServiceImpl:92] Listando todos los pacientes
+[2022-07-1119:17:12] [ DEBUG] [OdontologoServiceImpl:68] Modificando odontólogo
+[2022-07-1119:17:12] [ DEBUG] [OdontologoServiceImpl:58] Guardando odontólogo
+[2022-07-1119:17:16] [ DEBUG] [PacienteServiceImpl:66] Modificando paciente
+[2022-07-1119:17:16] [ DEBUG] [PacienteServiceImpl:56] Guardando paciente
+[2022-07-1119:17:21] [ DEBUG] [PacienteServiceImpl:92] Listando todos los pacientes
+[2022-07-1119:17:36] [ DEBUG] [OdontologoServiceImpl:94] Listando todos los odontólogos
+[2022-07-1119:17:40] [ DEBUG] [PacienteServiceImpl:92] Listando todos los pacientes
+[2022-07-1119:27:19] [ DEBUG] [PacienteServiceImpl:39] Creando paciente...
+[2022-07-1119:27:19] [ DEBUG] [PacienteServiceImpl:56] Guardando paciente
+[2022-07-1119:27:32] [ DEBUG] [OdontologoServiceImpl:41] Creando odontólogo...
+[2022-07-1119:27:32] [ DEBUG] [OdontologoServiceImpl:58] Guardando odontólogo
+[2022-07-1119:30:21] [ DEBUG] [PacienteServiceImpl:39] Creando paciente...
+[2022-07-1119:30:21] [ DEBUG] [PacienteServiceImpl:56] Guardando paciente
+[2022-07-1119:30:25] [ DEBUG] [OdontologoServiceImpl:41] Creando odontólogo...
+[2022-07-1119:30:25] [ DEBUG] [OdontologoServiceImpl:58] Guardando odontólogo
+[2022-07-1119:30:29] [ DEBUG] [TurnoServiceImpl:41] Creando turno...
+[2022-07-1119:30:29] [ DEBUG] [TurnoServiceImpl:67] Guardando turno
+[2022-07-1119:30:34] [ DEBUG] [TurnoServiceImpl:104] Listando todos los turnos
+[2022-07-1119:31:27] [ DEBUG] [TurnoServiceImpl:77] Modificando turno.
+[2022-07-1119:31:27] [ DEBUG] [TurnoServiceImpl:67] Guardando turno
+[2022-07-1119:31:31] [ DEBUG] [TurnoServiceImpl:104] Listando todos los turnos
+[2022-07-1119:32:01] [ DEBUG] [TurnoServiceImpl:86] Eliminando el turno con id: 1
+[2022-07-1119:32:05] [ ERROR] [GlobalExceptionHandler:31] No hay turnos para listar.
+[2022-07-1119:37:26] [ DEBUG] [PacienteServiceImpl:39] Creando paciente...
+[2022-07-1119:37:26] [ DEBUG] [PacienteServiceImpl:56] Guardando paciente
+[2022-07-1119:37:28] [ DEBUG] [OdontologoServiceImpl:41] Creando odontólogo...
+[2022-07-1119:37:28] [ DEBUG] [OdontologoServiceImpl:58] Guardando odontólogo
+[2022-07-1119:37:31] [ DEBUG] [TurnoServiceImpl:40] Creando turno...
+[2022-07-1119:37:31] [ DEBUG] [TurnoServiceImpl:59] Guardando turno
+[2022-07-1119:37:36] [ DEBUG] [TurnoServiceImpl:79] Modificando turno.
+[2022-07-1119:37:36] [ DEBUG] [TurnoServiceImpl:59] Guardando turno
+[2022-07-1119:37:41] [ DEBUG] [TurnoServiceImpl:79] Modificando turno.
+[2022-07-1119:37:41] [ DEBUG] [TurnoServiceImpl:59] Guardando turno
+[2022-07-1119:37:45] [ DEBUG] [TurnoServiceImpl:106] Listando todos los turnos
+[2022-07-1119:38:45] [ DEBUG] [TurnoServiceImpl:88] Eliminando el turno con id: 1
+[2022-07-1119:38:48] [ ERROR] [GlobalExceptionHandler:31] No hay turnos para listar.
+[2022-07-1119:39:13] [ DEBUG] [TurnoServiceImpl:40] Creando turno...
+[2022-07-1119:39:13] [ DEBUG] [TurnoServiceImpl:59] Guardando turno
+[2022-07-1119:39:16] [ DEBUG] [TurnoServiceImpl:106] Listando todos los turnos
+[2022-07-1119:39:39] [ DEBUG] [TurnoServiceImpl:79] Modificando turno.
+[2022-07-1119:39:39] [ DEBUG] [TurnoServiceImpl:59] Guardando turno
+[2022-07-1119:40:04] [ DEBUG] [TurnoServiceImpl:79] Modificando turno.
+[2022-07-1119:40:04] [ DEBUG] [TurnoServiceImpl:59] Guardando turno
+[2022-07-1119:41:16] [ DEBUG] [PacienteServiceImpl:39] Creando paciente...
+[2022-07-1119:41:16] [ DEBUG] [PacienteServiceImpl:56] Guardando paciente
+[2022-07-1119:41:18] [ DEBUG] [OdontologoServiceImpl:41] Creando odontólogo...
+[2022-07-1119:41:18] [ DEBUG] [OdontologoServiceImpl:58] Guardando odontólogo
+[2022-07-1119:41:22] [ DEBUG] [TurnoServiceImpl:40] Creando turno...
+[2022-07-1119:41:22] [ DEBUG] [TurnoServiceImpl:59] Guardando turno
+[2022-07-1119:41:29] [ DEBUG] [TurnoServiceImpl:79] Modificando turno.
+[2022-07-1119:41:29] [ DEBUG] [TurnoServiceImpl:59] Guardando turno
+[2022-07-1119:47:27] [ DEBUG] [PacienteServiceImpl:39] Creando paciente...
+[2022-07-1119:47:27] [ DEBUG] [PacienteServiceImpl:56] Guardando paciente
+[2022-07-1119:47:29] [ DEBUG] [OdontologoServiceImpl:41] Creando odontólogo...
+[2022-07-1119:47:29] [ DEBUG] [OdontologoServiceImpl:58] Guardando odontólogo
+[2022-07-1119:47:32] [ DEBUG] [TurnoServiceImpl:40] Creando turno...
+[2022-07-1119:47:32] [ DEBUG] [TurnoServiceImpl:59] Guardando turno
+[2022-07-1119:47:34] [ DEBUG] [TurnoServiceImpl:79] Modificando turno.
+[2022-07-1119:47:34] [ DEBUG] [TurnoServiceImpl:59] Guardando turno
+[2022-07-1119:47:39] [ DEBUG] [TurnoServiceImpl:79] Modificando turno.
+[2022-07-1119:47:39] [ DEBUG] [TurnoServiceImpl:59] Guardando turno
+[2022-07-1119:52:49] [ DEBUG] [PacienteServiceImpl:39] Creando paciente...
+[2022-07-1119:52:49] [ DEBUG] [PacienteServiceImpl:56] Guardando paciente
+[2022-07-1119:52:51] [ DEBUG] [OdontologoServiceImpl:41] Creando odontólogo...
+[2022-07-1119:52:51] [ DEBUG] [OdontologoServiceImpl:58] Guardando odontólogo
+[2022-07-1119:52:54] [ DEBUG] [TurnoServiceImpl:40] Creando turno...
+[2022-07-1119:52:54] [ DEBUG] [TurnoServiceImpl:59] Guardando turno
+[2022-07-1119:53:01] [ DEBUG] [TurnoServiceImpl:79] Modificando turno.
+[2022-07-1119:53:01] [ DEBUG] [TurnoServiceImpl:59] Guardando turno
+[2022-07-1119:53:06] [ DEBUG] [TurnoServiceImpl:40] Creando turno...
+[2022-07-1119:53:06] [ DEBUG] [TurnoServiceImpl:59] Guardando turno
+[2022-07-1119:53:14] [ DEBUG] [TurnoServiceImpl:106] Listando todos los turnos
+[2022-07-1120:03:05] [ DEBUG] [TurnoServiceImpl:40] Creando turno...
+[2022-07-1120:03:05] [ DEBUG] [TurnoServiceImpl:59] Guardando turno
+[2022-07-1120:05:33] [ DEBUG] [PacienteServiceImpl:39] Creando paciente...
+[2022-07-1120:05:33] [ DEBUG] [PacienteServiceImpl:56] Guardando paciente
+[2022-07-1120:05:35] [ DEBUG] [OdontologoServiceImpl:41] Creando odontólogo...
+[2022-07-1120:05:35] [ DEBUG] [OdontologoServiceImpl:58] Guardando odontólogo
+[2022-07-1120:05:38] [ DEBUG] [TurnoServiceImpl:40] Creando turno...
+[2022-07-1120:05:38] [ DEBUG] [TurnoServiceImpl:59] Guardando turno
+[2022-07-1120:05:43] [ DEBUG] [TurnoServiceImpl:106] Listando todos los turnos
+[2022-07-1120:07:16] [ DEBUG] [TurnoServiceImpl:40] Creando turno...
+[2022-07-1120:07:16] [ DEBUG] [TurnoServiceImpl:59] Guardando turno

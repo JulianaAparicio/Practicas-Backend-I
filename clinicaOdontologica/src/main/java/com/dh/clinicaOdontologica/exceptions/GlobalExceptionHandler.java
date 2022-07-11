@@ -29,7 +29,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(ServiceException.class)
     public ResponseEntity<String> serviceException(ServiceException ex) {
         logger.error(ex.getMessage());
-        return new ResponseEntity<>("No existen datos aún para mostrar.", HttpStatus.BAD_REQUEST);
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ex.getMessage());
     }
 
 
