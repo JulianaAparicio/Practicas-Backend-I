@@ -14,4 +14,10 @@ public class TurnoDTO {
     private String fecha;
     private String hora;
 
+    public TurnoDTO(Paciente paciente, Odontologo odontologo, String fecha, String hora) {
+        this.paciente = paciente;
+        this.odontologo = odontologo;
+        this.fecha = fecha;
+        this.hora = hora;
+    }
 }
