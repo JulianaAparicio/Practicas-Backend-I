@@ -62,7 +62,7 @@ public class TurnoServiceImpl implements ITurnoService {
             turnoRepository.save(turno);
 
         } else {
-            for (Turno turno:turnos) {
+            for (Turno turno : turnos) {
                 if (turno.getFecha().equals(turnoDTO.getFecha())){
                     throw new ServiceException("El odontólogo asignado al turno ya está ocupado en esa fecha. " +
                             "Por favor intente nuevamente.");

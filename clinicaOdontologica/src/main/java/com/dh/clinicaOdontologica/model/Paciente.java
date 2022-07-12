@@ -46,13 +46,12 @@ public class Paciente {
     public Paciente(){
     }
 
-    public Paciente(String nombre, String apellido, String dni, Domicilio domicilio, String email, LocalDate fechaDeIngreso, Set<Turno> turnos) {
+    public Paciente(String nombre, String apellido, String dni, Domicilio domicilio, String email, LocalDate fechaDeIngreso) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.dni = dni;
         this.domicilio = domicilio;
         this.email = email;
         this.fechaDeIngreso = fechaDeIngreso;
-        this.turnos = turnos;
     }
 }

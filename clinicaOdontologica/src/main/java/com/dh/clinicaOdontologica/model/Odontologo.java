@@ -32,5 +32,9 @@ public class Odontologo {
     public Odontologo() {
     }
 
-
+    public Odontologo(String apellido, String nombre, String matricula) {
+        this.apellido = apellido;
+        this.nombre = nombre;
+        this.matricula = matricula;
+    }
 }

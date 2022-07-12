@@ -348,3 +348,20 @@
 [2022-07-1120:23:57] [ DEBUG] [OdontologoServiceImpl:58] Guardando odontólogo
 [2022-07-1120:30:00] [ DEBUG] [PacienteServiceImpl:39] Creando paciente...
 [2022-07-1120:30:00] [ DEBUG] [PacienteServiceImpl:56] Guardando paciente
+[2022-07-1120:35:35] [ ERROR] [GlobalExceptionHandler:24] El turno que está intentando crear posee un paciente u odontólogo nulos.
+[2022-07-1120:36:29] [ ERROR] [GlobalExceptionHandler:24] El turno que está intentando crear posee un paciente u odontólogo nulos.
+[2022-07-1120:37:14] [ ERROR] [GlobalExceptionHandler:24] El turno que está intentando crear posee un paciente u odontólogo nulos.
+[2022-07-1120:43:24] [ ERROR] [GlobalExceptionHandler:24] El turno que está intentando crear posee un paciente u odontólogo nulos.
+[2022-07-1120:44:27] [ ERROR] [GlobalExceptionHandler:24] El turno que está intentando crear posee un paciente u odontólogo nulos.
+[2022-07-1121:10:50] [ ERROR] [GlobalExceptionHandler:24] El turno que está intentando crear posee un paciente u odontólogo nulos.
+[2022-07-1122:00:28] [ ERROR] [GlobalExceptionHandler:24] El turno que está intentando crear posee un paciente u odontólogo nulos.
+[2022-07-1122:02:06] [ DEBUG] [TurnoServiceImpl:40] Creando turno...
+[2022-07-1122:02:06] [ DEBUG] [TurnoServiceImpl:60] Guardando turno
+[2022-07-1122:02:12] [ DEBUG] [PacienteServiceImpl:39] Creando paciente...
+[2022-07-1122:02:12] [ DEBUG] [PacienteServiceImpl:56] Guardando paciente
+[2022-07-1122:02:15] [ DEBUG] [OdontologoServiceImpl:41] Creando odontólogo...
+[2022-07-1122:02:15] [ DEBUG] [OdontologoServiceImpl:58] Guardando odontólogo
+[2022-07-1122:02:19] [ DEBUG] [TurnoServiceImpl:40] Creando turno...
+[2022-07-1122:02:19] [ DEBUG] [TurnoServiceImpl:60] Guardando turno
+[2022-07-1122:02:23] [ DEBUG] [TurnoServiceImpl:108] Listando todos los turnos
+[2022-07-1122:02:40] [ ERROR] [GlobalExceptionHandler:17] El id N° 1 no existe.

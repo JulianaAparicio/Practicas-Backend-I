@@ -1,6 +1,5 @@
 package com.dh.clinicaOdontologica;
 
-import com.dh.clinicaOdontologica.dto.OdontologoDTO;
 import com.dh.clinicaOdontologica.dto.PacienteDTO;
 import com.dh.clinicaOdontologica.model.Domicilio;
 import com.dh.clinicaOdontologica.util.Jsons;
